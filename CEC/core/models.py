@@ -2,16 +2,15 @@ from django.db import models
 
 # Create your models here.
 class Ensino(models.Model):
-    titulo = models.CharField('Título', default = 'Ensino', max_length = 100)
-    sub_tit = models.CharField('Subtítulo', default = 'Conheça o método de ensino que usamos :', max_length = 100)
-    desc = models.TextField('Descrição da seção', default = 'Descrição da seção')
+    subtitulo = models.CharField('Subtítulo', max_length = 100)
+    desc = models.TextField('Descrição da seção')
 
     class Meta:
         verbose_name = 'Ensino'
         verbose_name_plural = 'Ensino'
 
     def __str__(self):
-        return self.titulo
+        return 'Ensino'
 
 class Evento(models.Model):
     titulo = models.CharField('Título do evento', default = 'Próximo Evento', max_length = 50)
@@ -35,7 +34,7 @@ class PropostaPedagogica(models.Model):
         return 'Proposta Pedagógica'
 
 class Valores(models.Model):
-    titulo = models.TextField('Título do valor')
+    titulo = models.CharField('Título do valor', max_length = 30)
     
     class Meta:
         verbose_name = 'Valor'
@@ -57,8 +56,6 @@ class Aplicativo(models.Model):
 class Galeria(models.Model):
     titulo = models.CharField('Título da imagem', default = 'Imagem', max_length = 30)
     img = models.ImageField('Imagem da galeria')
-    #rede_social = models.CharField('Link para rede_social', max_length = 100)
-
     class Meta:
         verbose_name = 'Imagem da galeria'
         verbose_name_plural = 'Imagens da galeria'
@@ -68,7 +65,10 @@ class Galeria(models.Model):
 
 class Contatos(models.Model):
     telefone = models.CharField('Telefone para Contato', max_length = 30)
-    email = models.CharField('Email para Contato', max_length = 50)
+    email = models.EmailField('Email para Contato', max_length = 50)
+    wpp = models.URLField('Link para WhatsApp', max_length = 100)
+    insta = models.URLField('Link para Instagram', max_length = 100)
+    face = models.URLField('Link para Facebook', max_length = 100)
 
     class Meta:
         verbose_name = 'Contato'
