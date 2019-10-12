@@ -1,7 +1,7 @@
 body{
 padding-top: 86px;
 }
-
+/*fontes*/
 h1{
     font-family: 'Pacifico', cursive;
     font-size: 48px !important;
@@ -24,7 +24,7 @@ h2 {
 }
 
 p{
-    font-family: Montserrat;
+    font-family:'Montserrat', sans-serif;
     font-weight: normal !important;
     font-size: 18px !important;
     line-height: 22px !important;
@@ -44,7 +44,7 @@ p{
     margin-right: 14px;
     
 }
-
+/*navbar*/
 .navbar{
     background: #FFFFFF ;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -95,7 +95,7 @@ p{
     padding-right: 8% !important;
     padding-left: 8% !important;
 }
-
+/*Banner*/
 .banner{
     padding-top: 10%;
     padding-bottom: 10%;
@@ -133,7 +133,7 @@ p{
     margin-bottom: 28%;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
-
+/*Ensino*/
 .ensino{
     background: url(imagens/ensino.png);
     background-size:100% 100%;
@@ -187,8 +187,12 @@ h3{
         background-size:100% 100%;
         padding-bottom: 45%;
     }
-}
+    h1,h3{
+        text-align: center;
+    }
 
+}
+/*Aplicativo*/
 .aplicativo{
     background: #FBFBFB;
     padding-top: 4%;
@@ -209,4 +213,47 @@ h3{
 .botao .img-fluid{
     padding-left: 5%;
     padding-top: 5%;
+}
+
+/*Galeria*/
+.galeria{
+    background: #F2F2F2;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.port img{
+	width: 100%;
+	height: auto;
+	padding-right:10%;
+	padding-left:10%;
+}
+
+
+.carrossel .slick-prev:before {
+    content: url(imagens/esquerda.png);
+    color:#FF9933;
+}
+  
+.carrossel .slick-next:before {
+    content: url(imagens/direita.png);
+    color:#FF9933;
+}
+
+.slick-dots li.slick-active button:before {
+    color:orange !important;
+    font-size: 15px;
+}
+
+.slick-dots li button:before {
+    color: orange !important;
+    font-size: 15px !important;
+}
+
+.slick-dots li {
+    height: 0px !important;
+}
+
+.slick-dots li button {
+    height: 0px !important;
 }
