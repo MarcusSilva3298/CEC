@@ -1,21 +1,0 @@
-
-var ftGUID_3971526="39166DF5BCCCC6";
-var ftConfID_3971526="0";
-var ftParams_3971526="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_ifb=1&ft_domain=www.fotor.com&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.fotor.com%2Fapp.html&cachebuster=837926.8699724014";
-var ftKeyword_3971526="";
-var ftCustom_3971526="";
-var ftSection_3971526="";
-var ftSegment_3971526="um2";
-var ftSegmentList_3971526=[{s:'um2'}];
-var ftRuleMatch_3971526="0";
-var ftTimestamp_3971526="1570406356";
-var ftImp3971526 = {};
-ftImp3971526.privacy = "x";
-ftImp3971526.guidAge = "380";
-ftImp3971526.impID = "5E333073-0334-FCA5-9170-39B37E47F0E1";
-ftImp3971526.duid = "FT:39166DF5BCCCC6";
-
-ftImp3971526.ft_tpplid = "";
-ftImp3971526.ft_c = {};
-
-document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/397/3971526/2747649/js/j-3971526-2747649.js" id="ftscript_m3971526" name="ftscript_m3971526"></scr'+'ipt>');
