@@ -45,6 +45,15 @@ h4{
     color: #FFFCF3;
 }
 
+h5{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal !important;
+    font-size: 20px;
+    line-height: 27px !important;
+    color: #4F4F4F;
+}
+
 p{
     font-family:'Montserrat', sans-serif;
     font-weight: normal !important;
@@ -319,4 +328,42 @@ h3{
     background: #3EBB51 !important;
     border-radius: 30px !important;
     padding:10px 12% 10px 12% !important;
+}
+
+/*Propostas pedagógicas*/
+.propostas{
+    background: #F2F2F2;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.propostas p{
+    padding-bottom: 5%;
+    padding-right: 6%;
+}
+
+.propostas h3{
+    text-decoration: underline;
+    text-decoration-color: #4F78C7;
+    
+}
+
+.valores{
+    display: inline-block;
+    padding-bottom: 2%;
+}
+
+.valores img{
+    float: left;
+    margin: 6px 12px 0px 0px;
+}
+
+.valores h5{
+    float: left;
+}
+
+@media (max-width: 576px){
+    .propostas .col-sm-12 , .propostas .col-lg-4{
+        text-align: center;
+    }
 }

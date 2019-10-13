@@ -1,13 +1,13 @@
-/*$('a[href^="#"]').on('click', function(e) {
+$('a[href^="#"]').on('click', function(e) {
   e.preventDefault();
   var id = $(this).attr('href'),
       targetOffset = $(id).offset().top;
       
   $('html, body').animate({ 
-    scrollTop: targetOffset - 80
+    scrollTop: targetOffset - 86
   }, 500);
 });
-*/
+
 
 
 // Portfolio
