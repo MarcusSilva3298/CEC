@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+
 #VIEWS
-from .core.views import home
+from .core.views import home, blogProjetos, postProjeto
 
 urlpatterns = [
     path('', home),
+    path('Projetos', blogProjetos),
+    path('Projetos/<str: slug>', postProjeto),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
