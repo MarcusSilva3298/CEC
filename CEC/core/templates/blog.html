@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body>
+    <div style="background-color: crimson;">
+        {% for item in Projetos %}
+            <div>
+                <h1> {{ item.titulo }} </h1>
+            </div>
+            <div>
+                <p> {{ item.desc }} </p>
+            </div>
+        {% endfor %}
+    </div> 
+    <div style = "background-color: brown;">
+        <h1>Paginador</h1>
+        {% if Projetos.has_other_pages %}
+            <ul class="pagination">
+                {% if Proejtos.has_previous %}
+                    <li><a href="?page={{ Projetos.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in Projetos.paginator.page_range %}
+                {% if Projetos.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if Projetos.has_next %}
+                    <li><a href="?page={{ Projetos.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
