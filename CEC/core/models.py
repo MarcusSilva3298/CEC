@@ -1,9 +1,24 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
+class Projetos(models.Model):
+    titulo = models.CharField('Titulo do Projeto', max_length = 100, default = 'Projeto', unique = True)
+    atalho = models.SlugField('Atalho', max_length = 100, default = 'Nome-do-Projeto', unique = True)
+    desc = models.TextField('Descrição rápida do projeto', default = 'Descrição do projeto')
+    content = RichTextField('Conteúdo do Post do Projeto')
+    start_date = models.DateField('Data de criação do Post', auto_now = True)
+
+    class Meta:
+        verbose_name = 'Projeto'
+        verbose_name_plural = 'Projetos'
+
+    def __str__(self):
+        return self.titulo
+
 class Ensino(models.Model):
-    subtitulo = models.CharField('Subtítulo', max_length = 100)
-    desc = models.TextField('Descrição da seção')
+    subtitulo = models.CharField('Subtítulo', max_length = 100, default = 'Subtítulo')
+    desc = models.TextField('Descrição da seção', max_length = 10)
 
     class Meta:
         verbose_name = 'Ensino'
@@ -14,7 +29,7 @@ class Ensino(models.Model):
 
 class Evento(models.Model):
     titulo = models.CharField('Título do evento', default = 'Próximo Evento', max_length = 50)
-    desc = models.TextField('Descrição do evento', default = 'Descrição do Evento')
+    desc = models.TextField('Descrição do evento')
 
     class Meta:
         verbose_name = 'Evento'
@@ -66,9 +81,9 @@ class Galeria(models.Model):
 class Contatos(models.Model):
     telefone = models.CharField('Telefone para Contato', max_length = 30)
     email = models.EmailField('Email para Contato', max_length = 50)
-    wpp = models.URLField('Link para WhatsApp', max_length = 100)
-    insta = models.URLField('Link para Instagram', max_length = 100)
-    face = models.URLField('Link para Facebook', max_length = 100)
+    wpp = models.URLField('Link para WhatsApp', max_length = 100, default = 'http://')
+    insta = models.URLField('Link para Instagram', max_length = 100, default = 'http://')
+    face = models.URLField('Link para Facebook', max_length = 100, default = 'http://')
 
     class Meta:
         verbose_name = 'Contato'
