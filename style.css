@@ -32,7 +32,6 @@ h3{
     font-size: 20px !important;
     line-height: 24px !important;
     color: #4F4F4F;
-    padding-bottom: 5%;
     margin: 0 !important;
 }
 
@@ -161,7 +160,7 @@ p{
 
 .banner h1{
     text-align: center !important;
-    margin-bottom: 28%;
+    margin-bottom: 26% !important;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 /*Ensino*/
@@ -172,25 +171,19 @@ p{
     padding-top: 4%;
     padding-bottom: 15%;
 }
+.ensino p{
+    padding-top: 5%;
+} 
 
 .titulo{
     padding-bottom: 4%;
     white-space: nowrap;
 }
+
 .icone{
     height: 70px;
     padding-bottom: 30px;
     padding-left: 6px;
-}
-
-h3{
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal !important;
-    font-weight: bold !important;
-    font-size: 20px !important;
-    line-height: 24px !important;
-    color: #4F4F4F;
-    padding-bottom: 5%;
 }
 
 @media (max-width: 991px){
@@ -221,7 +214,6 @@ h3{
     h1,h3{
         text-align: center;
     }
-
 }
 /*Aplicativo*/
 .aplicativo{
@@ -342,12 +334,6 @@ h3{
     padding-right: 6%;
 }
 
-.propostas h3{
-    text-decoration: underline;
-    text-decoration-color: #4F78C7;
-    
-}
-
 .valores{
     display: inline-block;
     padding-bottom: 2%;
@@ -362,8 +348,64 @@ h3{
     float: left;
 }
 
+.titulo-valores{
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 3px solid;
+    padding-bottom: 2px;
+    border-bottom-color: #4F78C7;
+    padding-right: 5px;
+}
+
+.propostas .col-sm-12{
+margin-top: 4%;
+}
+
 @media (max-width: 576px){
-    .propostas .col-sm-12 , .propostas .col-lg-4{
+    .propostas .col-sm-12 , .propostas .col-lg-4, .propostas .col-lg-12 {
         text-align: center;
     }
+    .titulo{
+        white-space: normal;
+    }
+}
+
+/*Matricula*/
+.matricula{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background: #FBFBFB;
+}
+
+.matricula .btn{
+    background: #DA3838 !important;
+    padding:6px 8.5% 6px 8.5% !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
+    margin-top: 14%;
+}
+
+.form-control {
+    height: calc(1.1em + .75rem + 2px) !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    background-color: #E0E0E0 !important;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px !important;
+    margin-bottom: 6%;
+    text-align: center !important;
+}
+
+.form{
+    width: 30% !important;
+}
+
+.matricula .titulo, .matricula p{
+    padding-bottom: 2%;
+    text-indent: 0 !important;
+}
+
+.enviar{
+    text-align: center;
 }
