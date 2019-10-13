@@ -1,0 +1,95 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>CEC Baby</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+    <!-- css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " >
+      <a class="navbar-brand" href="#Inicio"><img src="{% static 'img/logo.png' %}" class="logo" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#inicio" style="color: #DA3838;">INÍCIO<span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"><a class="nav-link" href="#ensino" style="color: #3EBB51;">ENSINO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos" style="color: #4F78C7;">PROJETOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#eventos" style="color: #F6C101;">EVENTOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#matricula" style="color: #DA3838;">MATRÍCULA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proposta" style="color: #3EBB51;">PROPSTA PEDAGÓGICA</a></li>
+          <li class="nav-item"><a class="nav-link" href="aplicativo" style="color: #4F78C7;">APLICATIVO</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria" style="color: #F6C101;">GALERIA</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="banner">
+      <div class="container-fluid">
+        <div class="row justify-content-end">
+          <div class="col-sm-6">
+            <img src="{% static 'img/Polygon.png' %}" alt="logo">
+            <h2>CEC</h2>
+            <h1 style="color:#F6C101">Compromisso com o saber</h1>
+            <a name="" id="" class="btn btn-primary" href="#" role="button">CONHEÇA NOSSA <br> ESCOLA</a>
+          </div>
+        </div>  
+      </div>
+    </section>
+
+    <section class="ensino">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="titulo">
+              <h1 style="color:#3EBB51;">Ensino</h1>
+              <img src="{% static 'img/icon.png' %}" alt="">
+            </div>
+            {% for ensino in Ensino %}
+              <h3>{{ ensino.subtitulo }}</h3>
+              <p>{{ ensino.desc }}</p>
+            {% endfor %}
+          </div>
+        </div>  
+      </div>
+    </section>
+
+    <section class="aplicativo">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-sm-12">
+            <div class="titulo">
+              <h1 style="color:#3EBB51;">Conheça nosso aplicativo</h1>
+              <img src="{% static 'img/icon.png' %}" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <img src="" alt="">
+          </div>
+          <div class="col-sm-8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id posuere dolor. Ut mi felis, pretium id mollis quis, euismod ut diam. Praesent condimentum massa sem, at blandit odio gravida at. Proin vestibulum justo eu mi faucibus, at lobortis eros pulvinar. Curabitur in justo elit. Nulla facilisi. Ut id sagittis lorem. Fusce non rhoncus odio, vitae elementum tortor. Vestibulum non pharetra lorem, sed ultricies nibh. Duis sit amet tincidunt ipsum.</p>
+          </div>
+
+        </div>  
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
