@@ -91,11 +91,13 @@ def blogProjetos(request):
 
 
 def postProjeto(request, slug):
+    print(slug)
     models_context = {}
     forms_context = {}
 
     models_context['Contatos'] = Contatos.objects.all()
-    
+    models_context['projeto'] = get_object_or_404(Projetos, atalho = slug)
+
     #Utilização do form
     if request.method is 'POST':
         form1 = Contato(request.POST)
