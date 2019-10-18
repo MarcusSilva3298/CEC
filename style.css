@@ -409,3 +409,27 @@ margin-top: 4%;
 .enviar{
     text-align: center;
 }
+/* Eventos */
+.evento{
+    background:url(imagens/eventos.jpg);
+    background-size: cover;
+}
+
+.evento .container-fluid{
+    padding: 0 !important;
+}
+
+.evento .col-lg-3{
+    background: #3EBB51;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.evento p{
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFCF3;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
