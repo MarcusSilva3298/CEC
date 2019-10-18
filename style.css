@@ -412,24 +412,56 @@ margin-top: 4%;
 /* Eventos */
 .evento{
     background:url(imagens/eventos.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 30%;
     background-size: cover;
+
 }
 
 .evento .container-fluid{
     padding: 0 !important;
+    
+}
+.evento .row{
+    margin: 0 !important;
 }
 
-.evento .col-lg-3{
+.card-evento{
     background: #3EBB51;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    width: 480px;
+    height: 520px;
+    padding-top: 50px;
+    padding-left:60px;
+    padding-right: 60px;
+
+}
+.card-evento .titulo h1{
+    text-align: center;
 }
 
 .evento p{
     font-size: 20px;
     line-height: 24px;
     color: #FFFCF3;
-    padding-right: 8%;
-    padding-left: 8%;
+    padding-top: 20px;
 }
 
+@media (max-width: 576px){
+    .card-evento{
+        padding-top: 30px;
+        padding-left:35px;
+        padding-right: 35px;
+    
+    }.evento p{
+        padding-top: 0px;
+    }
+    .evento{
+        padding-top: 500px;
+        background-size: cover;
+    }
+    .card-evento{
+        width: 576px;
+        height: 520px;
+    }
+    
+}
