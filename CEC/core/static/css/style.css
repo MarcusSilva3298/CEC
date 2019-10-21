@@ -1,15 +1,16 @@
 body{
 padding-top: 86px;
 }
-
+/*fontes*/
 h1{
     font-family: 'Pacifico', cursive;
-    font-size: 48px;
-    line-height: 84px;
+    font-size: 44px !important;
+    line-height: 50px !important;
     text-align: left;
     letter-spacing: 1.35px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 !important;
 }
+
 h2 {
     
     font-family: 'Montserrat', sans-serif;
@@ -24,8 +25,36 @@ h2 {
     -webkit-text-stroke-color: #C69D0C;
 }
 
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+    color: #4F4F4F;
+    margin: 0 !important;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFCF3;
+}
+
+h5{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal !important;
+    font-size: 20px;
+    line-height: 27px !important;
+    color: #4F4F4F;
+}
+
 p{
-    font-family: Montserrat;
+    font-family:'Montserrat', sans-serif;
     font-weight: normal !important;
     font-size: 18px !important;
     line-height: 22px !important;
@@ -45,7 +74,7 @@ p{
     margin-right: 14px;
     
 }
-
+/*navbar*/
 .navbar{
     background: #FFFFFF ;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -82,7 +111,7 @@ p{
     }
 }
 
-@media (max-width: 992px){
+@media (max-width: 991px){
     .navbar a{
         font-size: 14px;
     }
@@ -96,7 +125,7 @@ p{
     padding-right: 8% !important;
     padding-left: 8% !important;
 }
-
+/*Banner*/
 .banner{
     padding-top: 10%;
     padding-bottom: 10%;
@@ -131,64 +160,62 @@ p{
 
 .banner h1{
     text-align: center !important;
-    margin-bottom: 28%;
+    margin-bottom: 26% !important;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
-
+/*Ensino*/
 .ensino{
     background: url(imagens/ensino.png);
     background-size:100% 100%;
     background-repeat: no-repeat;
-    padding-top: 5%;
+    padding-top: 4%;
     padding-bottom: 15%;
 }
-
-
+.ensino p{
+    padding-top: 5%;
+} 
 
 .titulo{
-display: inline-block;
-padding-bottom: 4%;
+    padding-bottom: 4%;
+    white-space: nowrap;
 }
 
-h3{
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal !important;
-    font-weight: bold !important;
-    font-size: 20px !important;
-    line-height: 24px !important;
-    color: #4F4F4F;
-    padding-bottom: 5%;
+.icone{
+    height: 70px;
+    padding-bottom: 30px;
+    padding-left: 6px;
 }
 
-row{
-    align-items: center;
-}
-
-.titulo h1{
-   float: left;
-}
-
-.titulo img{
-    float: right;
-}
-
-@media (max-width: 992px){
+@media (max-width: 991px){
     .ensino{
+        background: url(imagens/992x652.png);
+        background-size:100% 100%;
         padding-bottom: 20%;
+    }
+    .botao{
+        text-align: center;
     }
 }
 
 @media (max-width: 768px){
     .ensino{
+        background: url(imagens/768x722.png);
+        background-size:100% 100%;
         padding-bottom: 30%;
     }
 }
 
 @media (max-width: 576px){
     .ensino{
-        padding-bottom: 40%;
+        background: url(imagens/596x737.png);
+        background-size:100% 100%;
+        padding-bottom: 45%;
+    }
+    h1,h3{
+        text-align: center;
     }
 }
-
+/*Aplicativo*/
 .aplicativo{
     background: #FBFBFB;
     padding-top: 4%;
@@ -196,5 +223,189 @@ row{
 }
 
 .aplicativo p {
-    margin-top: 15%;
+    margin-top: 6%;
+}
+
+.aplicativo .col-lg-5{
+    text-align: center;
+}
+.aplicativo p{
+    padding-left: 4%;
+}
+
+.botao .img-fluid{
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+/*Galeria*/
+.galeria{
+    background: #F2F2F2;
+    padding-top: 4%;
+    padding-bottom: 5%;
+}
+
+.port img{
+	width: 100%;
+	height: auto;
+	padding-right:10%;
+	padding-left:10%;
+}
+
+.carrossel .slick-prev:before {
+    content: url(imagens/esquerda.png);
+    color:#FF9933;
+}
+  
+.carrossel .slick-next:before {
+    content: url(imagens/direita.png);
+    color:#FF9933;
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li button:before {
+    color:orange !important;
+    font-size: 15px !important;
+}
+
+.slick-dots li, .slick-dots li button {
+    height: 0px !important;
+}
+
+/*Projetos*/
+.projetos{
+    padding-top: 4%;
+    padding-bottom: 6%;
+    background: #FBFBFB;
+}
+
+.projetos p{
+    font-family:'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFCF3;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 10%;
+    text-align: left !important;
+}
+
+.projetos .col-lg-4{
+    text-align: center;
+}
+
+.projetos .col-lg-4 img{
+    padding-bottom: 4%;
+}
+
+.card1{
+    background: linear-gradient(to bottom, #FFFCF3 0%, #FFFCF3 22%, #DA3838 22%, #DA3838 100%);
+}
+
+.card2{
+    background: linear-gradient(to bottom, #FFFCF3 0%, #FFFCF3 22%, #4F78C7 22%, #4F78C7 100%);
+}
+
+.card3{
+    background: linear-gradient(to bottom, #FFFCF3 0%, #FFFCF3 22%, #F6C101 22%, #F6C101 100%);
+}
+
+.botao-p{
+    padding-top: 5%;
+    text-align: center;
+}
+
+.botao-p .btn{
+    background: #3EBB51 !important;
+    border-radius: 30px !important;
+    padding:10px 12% 10px 12% !important;
+}
+
+/*Propostas pedagógicas*/
+.propostas{
+    background: #F2F2F2;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.propostas p{
+    padding-bottom: 5%;
+    padding-right: 6%;
+}
+
+.valores{
+    display: inline-block;
+    padding-bottom: 2%;
+}
+
+.valores img{
+    float: left;
+    margin: 6px 12px 0px 0px;
+}
+
+.valores h5{
+    float: left;
+}
+
+.titulo-valores{
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 3px solid;
+    padding-bottom: 2px;
+    border-bottom-color: #4F78C7;
+    padding-right: 5px;
+}
+
+.propostas .col-sm-12{
+margin-top: 4%;
+}
+
+@media (max-width: 576px){
+    .propostas .col-sm-12 , .propostas .col-lg-4, .propostas .col-lg-12 {
+        text-align: center;
+    }
+    .titulo{
+        white-space: normal;
+    }
+}
+
+/*Matricula*/
+.matricula{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background: #FBFBFB;
+}
+
+.matricula .btn{
+    background: #DA3838 !important;
+    padding:6px 8.5% 6px 8.5% !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
+    margin-top: 14%;
+}
+
+.form-control {
+    height: calc(1.1em + .75rem + 2px) !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    background-color: #E0E0E0 !important;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px !important;
+    margin-bottom: 6%;
+    text-align: center !important;
+}
+
+.form{
+    width: 30% !important;
+}
+
+.matricula .titulo, .matricula p{
+    padding-bottom: 2%;
+    text-indent: 0 !important;
+}
+
+.enviar{
+    text-align: center;
 }

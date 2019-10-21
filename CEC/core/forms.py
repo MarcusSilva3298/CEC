@@ -4,6 +4,7 @@ from django.core.mail import send_mail, EmailMessage
 class Matricula(forms.Form):
     #serie choices
     series = [
+        ('', 'Série'),
         ('0', 'Pré infantil'),
         ('1', 'fundamental 1'),
         ('2', 'fundamental 2')
@@ -11,24 +12,38 @@ class Matricula(forms.Form):
 
     nome_resp = forms.CharField(
         error_messages = {'required': 'Por favor, insira seu nome'},
-        widget = forms.TextInput( attrs= {})
+        widget = forms.TextInput( attrs= {
+            'class': 'form-control',
+            'placeholder': 'Digite o nome do responsável'
+        })
     )
     telefone = forms.CharField(
         error_messages = {'required': 'Por favor, insira seu telefone'},
-        widget = forms.TextInput( attrs= {})
+        widget = forms.TextInput( attrs= {
+            'class': 'form-control',
+            'placeholder': 'Digite o telefone do responsável'
+        })
     )
     email = forms.EmailField(
         error_messages = {'required': 'Por favor, insira seu email'},
-        widget = forms.EmailInput( attrs= {})
+        widget = forms.EmailInput( attrs= {
+            'class': 'form-control',
+            'placeholder': 'Digite o email do responsável'
+        })
     )
     nome_cri = forms.CharField(
         error_messages = {'required': 'Por favor, insira o nome da ciança'},
-        widget = forms.TextInput( attrs= {})
+        widget = forms.TextInput( attrs= {
+            'class': 'form-control',
+            'placeholder': 'Digite o nome da criança'
+        })
     )
     serie = forms.ChoiceField(
         choices = series,
         error_messages = {'required': 'Por favor, insira a série da criança'},
-        widget = forms.Select( attrs= {})
+        widget = forms.Select( attrs= {
+            'class': 'form-control form'
+        })
     )
 
     def send_mail(self):
