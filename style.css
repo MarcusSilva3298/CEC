@@ -149,11 +149,6 @@ p{
     padding-top: 5%;
 } 
 
-.titulo{
-    padding-bottom: 4%;
-    white-space: nowrap;
-}
-
 .icone{
     height: 70px;
     padding-bottom: 30px;
@@ -190,15 +185,12 @@ p{
     padding-top: 4%;
     padding-bottom: 5%;
 }
-.slick-slider{
-    padding-right: 10%;
-    padding-left: 10%;
-}
 
 .port img{
 	width: 100%;
-	height: auto;
-    border-radius: 3px;
+	height:auto;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .carrossel .slick-prev:before {
@@ -214,6 +206,11 @@ p{
 .slick-dots li.slick-active button:before, .slick-dots li button:before {
     color:orange !important;
     font-size: 15px !important;
+}
+
+.slick-dotted.slick-slider {
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .slick-dots li, .slick-dots li button {
@@ -427,6 +424,7 @@ width: 100px;
 .contatos{
     background: #FBFBFB;
     padding-top: 4%;
+    border-top: 5px solid #F6C101;
 }
 
 .contatos h1{
@@ -434,6 +432,7 @@ width: 100px;
     line-height: 42px !important;
     padding-bottom: 4%;
     text-align: center !important;
+    display: grid;
 }
 
 .contatos-text img{
@@ -452,7 +451,7 @@ width: 100px;
 }
 
 .social img{
-    margin-right: 5%;
+    margin-right: 20px;
 }
 
 .form-group .form-control{
@@ -460,8 +459,8 @@ width: 100px;
     width: 260px !important;
 }
 
-.form-control{
-    display: inline-block !important;
+.forms{
+    display: inline-table !important;
 }
 
 .mais .btn{
@@ -474,7 +473,31 @@ width: 100px;
 .contatos .col-lg-4 {
     align-items: center;
     text-align: center;
+    margin-bottom: 5%;
 }
+
+footer{
+    text-align: center;
+    background: #F6C101;
+    padding-bottom: 14px;
+    padding-top: 14px;
+}
+
+footer p{
+
+    margin: 0;
+    font-size: 14px;
+    line-height: 4px;
+    color: #FBFBFB;
+    display: inline;
+}
+
+footer img{
+    width: auto;
+    height: 20px;
+    
+}
+
 
 /*Responsivo*/
 @media (max-width: 1400px){
@@ -540,6 +563,7 @@ width: 100px;
     }
     .titulo{
         white-space: normal;
+        text-align: center!;
     }
     .card-evento{
         padding-top: 30px;
