@@ -74,6 +74,11 @@ p{
     margin-right: 14px;
     
 }
+
+.titulo{
+    white-space: nowrap;
+}
+
 /*navbar*/
 .navbar{
     background: #FFFFFF ;
@@ -142,7 +147,7 @@ p{
     background: url(imagens/ensino.png);
     background-size:100% 100%;
     background-repeat: no-repeat;
-    padding-top: 4%;
+    padding-top: 6%;
     padding-bottom: 15%;
 }
 .ensino p{
@@ -159,10 +164,13 @@ p{
 /*Aplicativo*/
 .aplicativo{
     background: #FBFBFB;
-    padding-top: 4%;
+    padding-top: 6%;
     padding-bottom: 5%;
 }
 
+.aplicativo h1{
+    padding-bottom: 6%;
+}
 .aplicativo p {
     margin-top: 6%;
 }
@@ -182,9 +190,13 @@ p{
 /*Galeria*/
 .galeria{
     background: #F2F2F2;
-    padding-top: 4%;
+    padding-top: 6%;
     padding-bottom: 5%;
 }
+
+.galeria h1{
+    padding-bottom: 6%;
+} 
 
 .port img{
 	width: 100%;
@@ -219,7 +231,7 @@ p{
 
 /*Projetos*/
 .projetos{
-    padding-top: 4%;
+    padding-top: 6%;
     padding-bottom: 6%;
     background: #FBFBFB;
 }
@@ -289,7 +301,7 @@ p{
 /*Propostas pedagógicas*/
 .propostas{
     background: #F2F2F2;
-    padding-top: 4%;
+    padding-top: 2%;
     padding-bottom: 4%;
 }
 
@@ -336,8 +348,8 @@ margin-top: 4%;
 
 /*Matricula*/
 .matricula{
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 6%;
+    padding-bottom: 6%;
     background:url(imagens/matricula.png);
     background-size: cover;
     background-position-y:50%; 
@@ -423,7 +435,7 @@ width: 100px;
 /*Contatos*/
 .contatos{
     background: #FBFBFB;
-    padding-top: 4%;
+    padding-top: 6%;
     border-top: 5px solid #F6C101;
 }
 
@@ -481,10 +493,11 @@ footer{
     background: #F6C101;
     padding-bottom: 14px;
     padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 footer p{
-
     margin: 0;
     font-size: 14px;
     line-height: 4px;
@@ -562,8 +575,8 @@ footer img{
         text-align: center;
     }
     .titulo{
-        white-space: normal;
-        text-align: center!;
+        white-space: pre-line;
+        text-align: center;
     }
     .card-evento{
         padding-top: 30px;
