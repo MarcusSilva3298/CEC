@@ -37,9 +37,9 @@ h3{
 
 h4{
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
     text-align: center;
     color: #FFFCF3;
 }
@@ -74,6 +74,11 @@ p{
     margin-right: 14px;
     
 }
+
+.titulo{
+    white-space: nowrap;
+}
+
 /*navbar*/
 .navbar{
     background: #FFFFFF ;
@@ -90,7 +95,416 @@ p{
     padding-bottom: 2px;
 }
 
+.container-fluid{
+    padding-right: 8% !important;
+    padding-left: 8% !important;
+}
 
+/*Banner*/
+.banner{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: url(imagens/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center !important;
+}
+
+.banner .btn{
+    font-weight: 800 !important;
+}
+
+.btn{
+    background-color:#F6C101 !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+    border-radius: 50px !important;
+    border: none !important;
+    font-family: Nunito !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 25px !important;
+    text-align: center !important;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding:14px 35px 14px 35px !important;
+    white-space: nowrap;
+}
+
+.btn:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
+}
+
+.banner h2{
+    margin-bottom: 6% !important;
+}
+
+.banner h1{
+    text-align: center !important;
+    margin-bottom: 26% !important;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+/*Ensino*/
+.ensino{
+    background: url(imagens/ensino.png);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 6%;
+    padding-bottom: 15%;
+}
+.ensino p{
+    padding-top: 5%;
+} 
+
+.icone{
+    height: 70px;
+    padding-bottom: 30px;
+    padding-left: 6px;
+}
+
+
+/*Aplicativo*/
+.aplicativo{
+    background: #FBFBFB;
+    padding-top: 6%;
+    padding-bottom: 5%;
+}
+
+.aplicativo h1{
+    padding-bottom: 6%;
+}
+.aplicativo p {
+    margin-top: 6%;
+}
+
+.aplicativo .col-lg-5{
+    text-align: center;
+}
+.aplicativo p{
+    padding-left: 4%;
+}
+
+.botao .img-fluid{
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+/*Galeria*/
+.galeria{
+    background: #F2F2F2;
+    padding-top: 6%;
+    padding-bottom: 5%;
+}
+
+.galeria h1{
+    padding-bottom: 6%;
+} 
+
+.port img{
+	width: 100%;
+	height:auto;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.carrossel .slick-prev:before {
+    content: url(imagens/esquerda.png);
+    color:#FF9933;
+}
+  
+.carrossel .slick-next:before {
+    content: url(imagens/direita.png);
+    color:#FF9933;
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li button:before {
+    color:orange !important;
+    font-size: 15px !important;
+}
+
+.slick-dotted.slick-slider {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.slick-dots li, .slick-dots li button {
+    height: 0px !important;
+}
+
+/*Projetos*/
+.projetos{
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background: #FBFBFB;
+}
+
+.projetos p{
+    font-family:'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFCF3;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 10%;
+    text-align: left !important;
+}
+
+.projetos .col-lg-4{
+    text-align: center;
+}
+
+.projetos h4{
+    padding-top: 4%;
+}
+
+.card1{
+    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 22%, #DA3838 22%, #DA3838 100%);
+}
+
+.card2{
+    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 22%, #4F78C7 22%, #4F78C7 100%);
+}
+
+.card3{
+    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 22%, #F6C101 22%, #F6C101 100%);
+}
+
+.botao-p{
+    padding-top: 5%;
+    text-align: center;
+}
+
+.botao-p .btn{
+    background: #3EBB51 !important;
+    border-radius: 30px !important;
+    padding:10px 12% 10px 12% !important;
+}
+
+.card1 img{
+    border: 10px solid #DA3838;
+    border-radius: 100%;
+    background: #DA3838;
+}
+
+.card2 img{
+    border: 10px solid #4F78C7;
+    border-radius: 100%;
+    background: #4F78C7;
+}
+
+.card3 img{
+    border: 10px solid #F6C101;
+    border-radius: 100%;
+    background: #F6C101;
+}
+
+/*Propostas pedagógicas*/
+.propostas{
+    background: #F2F2F2;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+.propostas p{
+    padding-bottom: 5%;
+    padding-right: 6%;
+}
+
+.valores{
+    display: inline-block;
+    padding-bottom: 2%;
+}
+
+.valores img{
+    float: left;
+    margin: 1px 12px 0px 0px;
+}
+
+.valores h5{
+    float: left;
+}
+
+.titulo-valores{
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 3px solid;
+    padding-bottom: 2px;
+    border-bottom-color: #4F78C7;
+    padding-right: 5px;
+}
+
+.propostas .col-sm-4{
+    text-align: center;
+}
+
+.propostas .col-sm-4 img{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.propostas .col-sm-12{
+margin-top: 4%;
+}
+
+/*Matricula*/
+.matricula{
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background:url(imagens/matricula.png);
+    background-size: cover;
+    background-position-y:50%; 
+}
+
+.matricula .btn{
+    background: #DA3838 !important;
+    padding:6px 8.5% 6px 8.5% !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
+    margin-top: 14%;
+    margin-left: 30px !important;
+}
+
+.form-control {
+    height: calc(1.1em + .75rem + 2px) !important;
+    width: 260px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    background-color: #E0E0E0 !important;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px !important;
+    margin-bottom: 20px;
+    text-align: center !important;
+    
+}
+
+.form{
+    width: 100px!important;
+}
+
+.matricula .titulo, .matricula p{
+    padding-bottom: 2%;
+    text-indent: 0 !important;
+}
+
+.enviar{
+    padding-left: 80px;
+}
+
+.enviar .btn{
+width: 100px;
+}
+
+/* Eventos */
+.evento .container-fluid{
+    padding: 0 !important;
+    
+}
+.evento .row{
+    margin: 0 !important;
+}
+
+.card-evento{
+    background: #3EBB51;
+    width: 480px;
+    height: 520px;
+    padding-top: 50px;
+    padding-left:60px;
+    padding-right: 60px;
+
+}
+.card-evento .titulo h1{
+    text-align: center;
+}
+
+.evento p{
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFCF3;
+    padding-top: 20px;
+}
+
+/*Contatos*/
+.contatos{
+    background: #FBFBFB;
+    padding-top: 6%;
+    border-top: 5px solid #F6C101;
+}
+
+.contatos h1{
+    font-size: 24px !important;
+    line-height: 42px !important;
+    padding-bottom: 4%;
+    text-align: center !important;
+    display: grid;
+}
+
+.contatos-text img{
+    display: inline-block;
+}
+
+.contatos p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    align-items: center;
+    color: #3EBB51;
+    text-indent: 10px !important;
+    padding-bottom: 3%;
+    display: inline-block;
+}
+
+.social img{
+    margin-right: 20px;
+}
+
+.form-group .form-control{
+    height: calc(3.8em + .75rem + 14px) !important;
+    width: 260px !important;
+}
+
+.forms{
+    display: inline-table !important;
+}
+
+.mais .btn{
+    padding:6px 8.5% 6px 8.5% !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
+    background: #0E4DC7 !important;
+}
+
+.contatos .col-lg-4 {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+footer{
+    text-align: center;
+    background: #F6C101;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 4px;
+    color: #FBFBFB;
+    display: inline;
+}
+
+footer img{
+    width: auto;
+    height: 20px;
+    
+}
+
+
+/*Responsivo*/
 @media (max-width: 1400px){
     .navbar a{
         padding-left: 8px !important;
@@ -119,74 +533,6 @@ p{
         border-bottom: 0;
         padding-bottom: 8px;
     }
-}
-
-.container-fluid{
-    padding-right: 8% !important;
-    padding-left: 8% !important;
-}
-/*Banner*/
-.banner{
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: url(imagens/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    text-align: center !important;
-}
-
-.btn{
-    background-color:#F6C101 !important;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
-    border-radius: 50px !important;
-    border: none !important;
-    font-family: Nunito !important;
-    font-weight: 800 !important;
-    font-size: 18px !important;
-    line-height: 25px !important;
-    text-align: center !important;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding:14px 35px 14px 35px !important;
-    white-space: nowrap;
-}
-
-.btn:hover{
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
-}
-
-.banner h2{
-    margin-bottom: 6% !important;
-}
-
-.banner h1{
-    text-align: center !important;
-    margin-bottom: 26% !important;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-}
-/*Ensino*/
-.ensino{
-    background: url(imagens/ensino.png);
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    padding-top: 4%;
-    padding-bottom: 15%;
-}
-.ensino p{
-    padding-top: 5%;
-} 
-
-.titulo{
-    padding-bottom: 4%;
-    white-space: nowrap;
-}
-
-.icone{
-    height: 70px;
-    padding-bottom: 30px;
-    padding-left: 6px;
-}
-
-@media (max-width: 991px){
     .ensino{
         background: url(imagens/992x652.png);
         background-size:100% 100%;
@@ -203,209 +549,58 @@ p{
         background-size:100% 100%;
         padding-bottom: 30%;
     }
+
+    .matricula{
+        background-position-x:64% !important; 
+    }
 }
 
 @media (max-width: 576px){
     .ensino{
-        background: url(imagens/596x737.png);
-        background-size:100% 100%;
-        padding-bottom: 45%;
+        background:#F2F2F2;
+        padding-bottom: 10%;
     }
     h1,h3{
         text-align: center;
     }
-}
-/*Aplicativo*/
-.aplicativo{
-    background: #FBFBFB;
-    padding-top: 4%;
-    padding-bottom: 5%;
-}
-
-.aplicativo p {
-    margin-top: 6%;
-}
-
-.aplicativo .col-lg-5{
-    text-align: center;
-}
-.aplicativo p{
-    padding-left: 4%;
-}
-
-.botao .img-fluid{
-    padding-left: 5%;
-    padding-top: 5%;
-}
-
-/*Galeria*/
-.galeria{
-    background: #F2F2F2;
-    padding-top: 4%;
-    padding-bottom: 5%;
-}
-
-.port img{
-	width: 100%;
-	height: auto;
-	padding-right:10%;
-	padding-left:10%;
-}
-
-.carrossel .slick-prev:before {
-    content: url(imagens/esquerda.png);
-    color:#FF9933;
-}
-  
-.carrossel .slick-next:before {
-    content: url(imagens/direita.png);
-    color:#FF9933;
-}
-
-.slick-dots li.slick-active button:before, .slick-dots li button:before {
-    color:orange !important;
-    font-size: 15px !important;
-}
-
-.slick-dots li, .slick-dots li button {
-    height: 0px !important;
-}
-
-/*Projetos*/
-.projetos{
-    padding-top: 4%;
-    padding-bottom: 6%;
-    background: #FBFBFB;
-}
-
-.projetos p{
-    font-family:'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: #FFFCF3;
-    padding-left: 7%;
-    padding-right: 7%;
-    padding-bottom: 10%;
-    text-align: left !important;
-}
-
-.projetos .col-lg-4{
-    text-align: center;
-}
-
-.projetos .col-lg-4 img{
-    padding-bottom: 4%;
-}
-
-.card1{
-    background: linear-gradient(to bottom, #FFFCF3 0%, #FFFCF3 22%, #DA3838 22%, #DA3838 100%);
-}
-
-.card2{
-    background: linear-gradient(to bottom, #FFFCF3 0%, #FFFCF3 22%, #4F78C7 22%, #4F78C7 100%);
-}
-
-.card3{
-    background: linear-gradient(to bottom, #FFFCF3 0%, #FFFCF3 22%, #F6C101 22%, #F6C101 100%);
-}
-
-.botao-p{
-    padding-top: 5%;
-    text-align: center;
-}
-
-.botao-p .btn{
-    background: #3EBB51 !important;
-    border-radius: 30px !important;
-    padding:10px 12% 10px 12% !important;
-}
-
-/*Propostas pedagógicas*/
-.propostas{
-    background: #F2F2F2;
-    padding-top: 4%;
-    padding-bottom: 4%;
-}
-
-.propostas p{
-    padding-bottom: 5%;
-    padding-right: 6%;
-}
-
-.valores{
-    display: inline-block;
-    padding-bottom: 2%;
-}
-
-.valores img{
-    float: left;
-    margin: 6px 12px 0px 0px;
-}
-
-.valores h5{
-    float: left;
-}
-
-.titulo-valores{
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 3px solid;
-    padding-bottom: 2px;
-    border-bottom-color: #4F78C7;
-    padding-right: 5px;
-}
-
-.propostas .col-sm-12{
-margin-top: 4%;
-}
-
-@media (max-width: 576px){
     .propostas .col-sm-12 , .propostas .col-lg-4, .propostas .col-lg-12 {
         text-align: center;
     }
     .titulo{
-        white-space: normal;
+        white-space: pre-line;
+        text-align: center;
     }
-}
+    .card-evento{
+        padding-top: 30px;
+        padding-left:35px;
+        padding-right: 35px;
+    
+    }.evento p{
+        padding-top: 0px;
+    }
+    .evento{
+        padding-top: 210px;
+        background-size: 100% auto;
+        background-position-y: 0%;
+    }
+    .card-evento{
+        width: 576px;
+        height: 520px;
+    }
+    .enviar .btn {
+        width: auto;
+    }
+    .enviar{
+        padding-left: 0;
+    }
+    .matricula .row{
+        text-align: center !important;
+    }
+    .form-control {
+        width: 100% !important;
+    }
+    .matricula{
+        background-position-x:0 !important; 
+    }
 
-/*Matricula*/
-.matricula{
-    padding-top: 4%;
-    padding-bottom: 4%;
-    background: #FBFBFB;
-}
-
-.matricula .btn{
-    background: #DA3838 !important;
-    padding:6px 8.5% 6px 8.5% !important;
-    font-size: 14px !important;
-    line-height: 19px !important;
-    margin-top: 14%;
-}
-
-.form-control {
-    height: calc(1.1em + .75rem + 2px) !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 14px !important;
-    line-height: 17px !important;
-    background-color: #E0E0E0 !important;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 9px !important;
-    margin-bottom: 6%;
-    text-align: center !important;
-}
-
-.form{
-    width: 30% !important;
-}
-
-.matricula .titulo, .matricula p{
-    padding-bottom: 2%;
-    text-indent: 0 !important;
-}
-
-.enviar{
-    text-align: center;
 }

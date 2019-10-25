@@ -5,9 +5,11 @@ from ckeditor.fields import RichTextField
 class Projetos(models.Model):
     titulo = models.CharField('Titulo do Projeto', max_length = 100, default = 'Projeto', unique = True)
     atalho = models.SlugField('Atalho', max_length = 100, default = 'Nome-do-Projeto', unique = True)
-    desc = models.TextField('Descrição rápida do projeto', default = 'Descrição do projeto')
+    desc = models.TextField('Descrição rápida do projeto', default = 'Descrição do projeto') #max = 260 caracteres
     content = RichTextField('Conteúdo do Post do Projeto')
     start_date = models.DateField('Data de criação do Post', auto_now = True)
+    img_ic = models.ImageField(verbose_name = 'Imagem ícone do projeto', upload_to = 'img/projeto/icone')
+    img_bn = models.ImageField(verbose_name = 'Imagem banner do projeto', upload_to = 'img/projeto/banner')
 
     class Meta:
         verbose_name = 'Projeto'
@@ -18,7 +20,7 @@ class Projetos(models.Model):
 
 class Ensino(models.Model):
     subtitulo = models.CharField('Subtítulo', max_length = 100, default = 'Subtítulo')
-    desc = models.TextField('Descrição da seção', max_length = 10)
+    desc = models.TextField('Descrição da seção')
 
     class Meta:
         verbose_name = 'Ensino'
@@ -29,6 +31,7 @@ class Ensino(models.Model):
 
 class Evento(models.Model):
     titulo = models.CharField('Título do evento', default = 'Próximo Evento', max_length = 50)
+    img = models.ImageField(verbose_name = 'Imagem do evento', upload_to = 'img/evento')
     desc = models.TextField('Descrição do evento')
 
     class Meta:
@@ -40,6 +43,7 @@ class Evento(models.Model):
 
 class PropostaPedagogica(models.Model):
     desc = models.TextField('Texto da Proposta Pedagócia')
+    img = models.ImageField(verbose_name = 'Imagem da Proposta Pedagógica', upload_to = 'img/proposta_pedagógica')
 
     class Meta:
         verbose_name = 'Proposta Pedagógia'
@@ -60,6 +64,9 @@ class Valores(models.Model):
 
 class Aplicativo(models.Model):
     desc = models.TextField('Texto do Conheça Nosso Aplicativo')
+    img = models.ImageField(verbose_name = 'Imagem do Aplicativo', upload_to = 'img/aplicativo')
+    playstore = models.URLField('Link para Download do App na PlayStore', max_length = 10000, default = 'http://')
+    ios = models.URLField('Link para Download do App na AppStore', max_length = 10000, default = 'http://')
 
     class Meta:
         verbose_name = 'Aplicativo'
@@ -70,7 +77,7 @@ class Aplicativo(models.Model):
 
 class Galeria(models.Model):
     titulo = models.CharField('Título da imagem', default = 'Imagem', max_length = 30)
-    img = models.ImageField('Imagem da galeria')
+    img = models.ImageField(verbose_name = 'Imagem para galeria', upload_to = 'img/galeria')
     class Meta:
         verbose_name = 'Imagem da galeria'
         verbose_name_plural = 'Imagens da galeria'

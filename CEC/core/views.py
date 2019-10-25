@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.views.generic import ListView
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 from .models import Ensino, Evento, PropostaPedagogica, Valores, Aplicativo, Galeria, Contatos, Projetos
@@ -18,10 +18,17 @@ def home(request):
     models_context['Aplicativo'] = Aplicativo.objects.all()
     models_context['Galeria'] = Galeria.objects.all()
     models_context['Contatos'] = Contatos.objects.all()
-    models_context['Projetos'] = Projetos.objects.order_by('-start_date')
+    models_context['Projetos'] = Projetos.objects.order_by('-start_date')[:3]
+
+    forms_context = {
+        'form': Matricula(),
+        'form1': Contato()
+    }
+
+    data = { **models_context, **forms_context}
 
     #Utilização dos forms
-    if request.method is 'POST':
+    if request.method == 'POST':
         #Importação dos forms
         form = Matricula(request.POST)
         form1 = Contato(request.POST)
@@ -43,11 +50,7 @@ def home(request):
             #RESETANDO OS FORMS
             form = Matricula()
             form1 =  Contato()
-    else:
-        form = Matricula()
-        form1 =  Contato()
 
-    data = { **models_context, **forms_context}
     return render(request, 'index.html', data)
 
 

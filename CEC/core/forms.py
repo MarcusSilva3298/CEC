@@ -67,7 +67,9 @@ class Matricula(forms.Form):
 class Contato(forms.Form):
     nome = forms.CharField(
         error_messages = {'required': 'Por favor, insira seu nome'},
-        widget = forms.TextInput( attrs= {})
+        widget = forms.TextInput( attrs= {
+            
+        })
     )
     telefone = forms.CharField(
         error_messages = {'required': 'Por favor, insira seu telefone'},

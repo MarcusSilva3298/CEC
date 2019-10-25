@@ -4,27 +4,27 @@
 
 <head>
   <title>CEC Baby</title>
-  <!-- Required meta tags -->
+  <!--Required meta tags-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- fonts-->
+  <!--fonts-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
-  <!-- css-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <!--css-->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-  <!-- Links para o slick -->
+  <!--Links para o slick-->
   <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick-theme.css' %}" />
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--Bootstrap CSS-->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
-    <a class="navbar-brand" href="#Inicio"><img src="{% static 'img/logo.png' %}" class="logo" alt="logo"></a>
+    <a class="navbar-brand" href="#banner"><img src="{% static 'img/logo.png' %}" class="logo" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
     </div>
   </nav>
 
-  <!-- Banner -->
+  <!--Banner-->
   <section class="banner" id="banner">
     <div class="container-fluid">
       <div class="row justify-content-end">
@@ -52,72 +52,67 @@
           <img src="{% static 'img/Polygon.png' %}" alt="logo">
           <h2>CEC</h2>
           <h1 style="color:#F6C101">Compromisso com o saber</h1>
-          <a name="" id="" class="btn btn-primary" href="#" role="button">CONHEÇA NOSSA <br> ESCOLA</a>
+          <a name="" id="" class="btn btn-primary" href="#ensino" role="button">CONHEÇA NOSSA <br> ESCOLA</a>
         </div>
       </div>
     </div>
   </section>
-  <!-- Fim Banner -->
+  <!--Fim Banner-->
 
-  <!-- Ensino -->
+  <!--Ensino-->
   <section class="ensino" id="ensino">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
           <div class="titulo">
-            <h1 style="color:#3EBB51;">Ensino<img src="{% static 'img/icon-vd.png' %}" class="icone" alt=""></h1>
+            <h1 style="color:#3EBB51;">Ensino<img src="{% static 'img/icon-vd.png' %}" class="icone" alt="Icone de lapis"></h1>
           </div>
-          <h3>Conheça o método de ensino que usamos :</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-            unknown.</p>
+          {% for item in Ensino %}
+            <h3>{{ item.subtitulo }}</h3>
+            <p>{{ item.desc }}</p>
+          {% endfor%}
         </div>
       </div>
     </div>
   </section>
-  <!-- Fim Ensino -->
+  <!--Fim Ensino-->
 
-  <!-- Projetos -->
+  <!--Projetos-->
   <section class="projetos" id="projetos">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
           <div class="titulo">
-            <h1 style="color:#4F78C7;">Projetos<img src="{% static 'img/icon-az.png' %}" class="icone" alt=""></h1>
+            <h1 style="color:#4F78C7;">Projetos<img src="{% static 'img/icon-az.png' %}" class="icone" alt="Icone de lapis"></h1>
           </div>
         </div>
-
-        <div class="col-lg-4 ">
-          <div class="card1">
-            <img src="imagens/kid.png" alt="">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card2">
-            <img src="imagens/kid.png" alt="">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card3">
-            <img src="imagens/kid.png" alt="">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
+        {% for item in Projetos %}
+          {% if forloop.counter is 1 %}
+            <div class="col-lg-4 ">
+              <div class="card1">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo }}">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% elif forloop.counter is 2 %}
+            <div class="col-lg-4 ">
+              <div class="card2">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo }}">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% elif forloop.counter is 3 %}
+            <div class="col-lg-4 ">
+              <div class="card3">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo }}">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
 
         <div class="col-lg-12 botao-p">
           <a name="" id="" class="btn btn-primary" href="#" role="button">SAIBA MAIS</a>
@@ -125,163 +120,199 @@
       </div>
     </div>
   </section>
-  <!-- Fim Projetos -->
+  <!--Fim Projetos-->
 
-  <!-- Aplicativo -->
+  <!--Proximo evento-->
+  {% for item in Evento %}
+    <section class="evento" id="eventos" style="background: url({{ item.img.url }}); background-repeat: no-repeat; background-position-y: 30%; background-size: cover;">
+      <div class="container-fluid">
+        <div class="row justify-content-end">
+          <div class="card-evento">
+              <div class="titulo">
+                <h1 style="color:#FFFCF3;">{{ item.titulo }}<img src="{% static 'img/icon-b.png' %}" class="icone" alt="Icone de lapis"></h1>
+              </div>
+              <p>{{ item.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endfor %}
+
+  <!--Fim Proximo evento-->
+
+  <!--Matricula-->
   <section class="matricula" id="matricula">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
 
           <div class="titulo">
-            <h1 style="color:#DA3838;">Matrícula<img src="{% static 'img/icon-vm.png' %}" class="icone" alt=""></h1>
+            <h1 style="color:#DA3838;">Matrícula<img src="{% static 'img/icon-vm.png' %}" class="icone" alt="Icone de lapis"></h1>
           </div>
 
           <p>Faça a pré-matrícula da sua criança preenchendo os campos abaixo:</p>
         </div>
-          <div class="col-sm-3">
-            
-            <input class="form-control" type="text" placeholder="Digite o nome do responsável">
-            <input class="form-control" type="text" placeholder="Digite o telefone do responsável">
-            <input class="form-control" type="text" placeholder="Digite o email do responsável">
-            <input class="form-control" type="text" placeholder="Digite o nome da criança">
+        <div class="col-sm-3 ">
+          <form method = "POST">
+            {% csrf_token %}
 
-            <select class="form-control form">
-              <option>Série</option>
-            </select>
+            {% for fields in form %}
+              {{ fields }}
+            {% endfor %}
 
             <div class="enviar">
-              <a name="" id="" class="btn btn-primary" href="#" role="button">ENVIAR</a>
+              <button name="" id="" class="btn btn-primary" type="submit">ENVIAR</button>
             </div>
-
-          </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
-  <!-- fim Aplicativo -->
+  <!--fim Matricula-->
 
-  <!-- Propostas pedagógicas -->
+  <!--Propostas pedagógicas-->
   <section class="propostas" id="proposta">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
           <div class="titulo">
-            <h1 style="color:#4F78C7;">Propostas pedagógicas<img src="{% static 'img/icon-az.png' %}" class="icone" alt="">
-            </h1>
+            <h1 style="color:#4F78C7;">Proposta pedagógica<img src="{% static 'img/icon-az.png' %}" class="icone" 
+              alt="Icone de lapis"></h1>
           </div>
         </div>
 
-        <div class="col-lg-8">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.</p>
+        <div class="col-sm-8">
+          {% for item in Proposta_Pedagogica %}
+            <p>{{ item.desc }}</p>
+          {% endfor %}
           <div class="col-lg-12">
             <div class="titulo-valores">
               <h3>Nossos valores:</h3>
             </div>
           </div>
           <div class="col-sm-12">
-            <div class="valores">
-              <img src="{% static 'img/Star.png' %}" alt="">
-              <h5>Lorem Ipsum</h5>
-            </div>
-            <br>
-            <div class="valores">
-              <img src="imagens/Star.png" alt="">
-              <h5>Lorem Ipsum</h5>
-            </div>
-            <br>
-            <div class="valores">
-              <img src="imagens/Star.png" alt="">
-              <h5>Lorem Ipsum</h5>
-            </div>
+            {% for item in Valores %}
+              <div class="valores">
+                  <img src="{% static 'img/Star.png' %}" alt="estrela">
+                  <h5>Lorem Ipsum</h5>
+              </div>
+              <br>
+            {% endfor %}
           </div>
         </div>
 
-        <div class="col-lg-4">
-          <img src="imagens/parque.jpg" class="img-fluid" alt="">
-        </div>
+        {% for item in Proposta_Pedagogica %}
+          <div class="col-sm-4">
+            <img src="{{ item.img.url }}" class="img-fluid" alt="Proposta_Pedagogica_img">
+          </div>
+        {% endfor %}
       </div>
     </div>
   </section>
-  <!-- Fim Propostas pedagógicas -->
+  <!--Fim Propostas pedagógicas-->
 
+  <!--Aplicativo-->
   <section class="aplicativo" id="aplicativo">
     <div class="container-fluid">
       <div class="row">
 
         <div class="col-sm-12">
           <div class="titulo">
-            <h1 style="color:#3EBB51;">Conheça nosso aplicativo<img src="{% static 'img/icon-vd.png' %}" class="icone" alt="">
+            <h1 style="color:#3EBB51;">Conheça nosso aplicativo<img src="{% static 'img/icon-vd.png' %}" class="icone" alt="Icone de lapis">
             </h1>
           </div>
         </div>
-
-        <div class="col-lg-5">
-          <img src="imagens/APP.png" class="img-fluid " alt="">
-        </div>
-
-        <div class="col-lg-7">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <div class="botao">
-            <img src="{% static 'img/google.png' %}" class="img-fluid" alt="">
-            <img src="{% static 'img/apple.png' %}" class="img-fluid" alt="">
+        {% for item in Aplicativo %}
+          <div class="col-lg-5">
+            <img src="{{ item.img.url }}" class="img-fluid " alt="Aplicativo_Img">
           </div>
-        </div>
+
+          <div class="col-lg-7">
+            <p>{{ item.desc }}</p>
+            <div class="botao">
+              <a href="{{ item.playstore }}" target="blank"><img src="{% static 'img/google.png' %}" class="img-fluid" alt="google play"></a>
+              <a href="{{ item.ios }}" target="blank"><img src="{% static 'img/apple.png' %}" class="img-fluid" alt="app store"></a>
+            </div>
+          </div>
+        {% endfor %}
 
       </div>
     </div>
   </section>
+  <!--Fim Aplicativo-->
 
-  <!-- Potifólio -->
+  <!--Galeria-->
   <section class="galeria" id="galeria">
     <div class="container-fluid">
 
       <div class="titulo">
-        <h1 style="color:#F6C101;">Galeria<img src="{% static 'img/icon-am.png' %}" class="icone" alt=""></h1>
+        <h1 style="color:#F6C101;">Galeria<img src="{% static 'img/icon-am.png' %}" class="icone" alt="Icone de lapis"></h1>
       </div>
 
       <div class="carrossel">
-        <div class="port">
-          <img src="imagens/galeria1.jpg" alt="galeria">
-        </div>
+        {% for item in Galeria %}
+          <div class="port">
+            <img class="teste" src="{{ item.img.url }}" alt="{{ item.titulo }}">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!--Fim galeria-->
 
-        <div class="port">
-          <img src="imagens/galeria2.jpg" alt="galeria">
+  <!--Contatos-->
+  <section class="contatos" id="contatos">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4">
+          <h1 style="color: #0E4DC7;">Fale com a diretora</h1>
+          <div class="forms">
+            <input class="form-control" type="text" placeholder="Digite seu nome">
+            <input class="form-control" type="text" placeholder="Digite seu telefone">
+            <div class="form-grup">
+              <input class="form-control" type="text" placeholder="Digite sua mensagem">
+            </div>
+          </div>
+          <div class="mais">
+            <button name="#" id="" class="btn btn-primary" href="#" type="submit">ENVIAR</button>
+          </div>
         </div>
-
-        <div class="port">
-          <img src="imagens/galeria3.jpg" alt="galeria">
+        <div class="col-lg-4">
+          <h1 style="color:#3EBB51;">Contatos</h1>
+          {% for item in Contatos %}
+            <div class="contatos-text">
+              <img src="{% static 'img/fone.png' %}" alt="telefone">
+              <p>{{ item.telefone }}</p>
+            </div>
+            <div class="contatos-text">
+              <img src="{% static 'img/e-mail.png' %}" alt="e-mail">
+              <p>{{ item.email }}</p>
+            </div>
+            <div class="social">
+              <a href="{{ item.wpp }}" target="blank"><img src="{% static 'img/face.png' %}" alt="facebook"></a>
+              <a href="{{ item.insta }}" target="blank"><img src="{% static 'img/insta.png' %}" alt="instagram"></a>
+              <a href="{{ item.face }}" target="blank"><img src="{% static 'img/wpp.png' %}" alt="whatsapp"></a>
+            </div>
+          {% endfor %}
         </div>
-
-        <div class="port">
-          <img src="imagens/galeria2.jpg" alt="galeria">
-        </div>
-
-        <div class="port">
-          <img src="imagens/galeria3.jpg" alt="galeria">
-        </div>
-
-        <div class="port">
-          <img src="imagens/galeria1.jpg" alt="galeria">
+        <div class="col-lg-4">
+          <h1 style="color:#DA3838;">Onde estamos</h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15878.47517478385!2d-35.2029964!3d-5.7678647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6cee4670bab6ee3a!2sCEC%20Baby!5e0!3m2!1spt-BR!2sbr!4v1571604643865!5m2!1spt-BR!2sbr"
+            width="260" height="240" frameborder="0" style="border:0;" allowfullscreen="">
+          </iframe>
         </div>
       </div>
     </div>
   </section>
-  <!-- Fim galeria -->
-
-
-
-
+  <!--Fim Contatos-->
+  <footer>
+    <p><b>CEC Baby</b> © 2019 . Desenvolvido pela</p>
+    <a herf="https://www.ejectufrn.com.br" target="_blank"><img src="{% static 'img/eject.png' %}" alt="eject"></a>
+  </footer>
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'slick/slick/slick.min.js' %}"></script>
   <script src="{% static 'slick/Function.js' %}"></script>
 </body>
 
