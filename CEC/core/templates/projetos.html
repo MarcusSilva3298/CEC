@@ -55,60 +55,19 @@
         </div>
 
         {% for item in Projetos %}
-          {% if forloop.counter == 1 %}
-            <div class="col-lg-4 ">
-              <h1>1 ou 6</h1>
-              <div class="card1">
-                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
-                <h4>{{ item.titulo }}</h4>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
-          {% elif foorloop.counter == 2 %}
-            <div class="col-lg-4 ">
-              <h1>1 ou 6</h1>
-              <div class="card1">
-                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
-                <h4>{{ item.titulo }}</h4>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
-          {% elif foorloop.counter == 3 %}
-            <div class="col-lg-4 ">
-              <h1>1 ou 6</h1>
-              <div class="card1">
-                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
-                <h4>{{ item.titulo }}</h4>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
-          {% elif foorloop.counter == 4 %}
-            <div class="col-lg-4 ">
-              <h1>1 ou 6</h1>
-              <div class="card1">
-                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
-                <h4>{{ item.titulo }}</h4>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
-          {% elif foorloop.counter == 5 %}
-            <div class="col-lg-4 ">
-              <h1>1 ou 6</h1>
-              <div class="card3">
-                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
-                <h4>{{ item.titulo }}</h4>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
-          {% else %}
-            <div class="col-lg-4 ">
-              <div class="card2">
-                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
-                <h4>{{ item.titulo }}</h4>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
+          <div class="col-lg-4 ">
+          {% if forloop.counter is 1 or forloop.counter is 6 %}
+            <div class="card1">
+          {% elif forloop.counter is 2 or forloop.counter is 4 %}
+            <div class="card2">
+          {% elif forloop.counter is 3 or forloop.counter is 5 %}
+            <div class="card3">
           {% endif %}
+              <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
+              <h4>{{ item.titulo }}</h4>
+              <p>{{ item.desc }}</p>
+            </div>
+          </div>
         {% endfor %}
 
         {% if Projetos.has_other_pages %}
