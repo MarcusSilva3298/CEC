@@ -55,60 +55,62 @@
         </div>
 
         {% for item in Projetos %}
-          <div class="col-lg-4 ">
-            <div class="card1">
-              <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
-              <h4>{{ item.titulo }}</h4>
-              <p>{{ item.desc }}</p>
+          {% if forloop.counter == 1 %}
+            <div class="col-lg-4 ">
+              <h1>1 ou 6</h1>
+              <div class="card1">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
             </div>
-          </div>
+          {% elif foorloop.counter == 2 %}
+            <div class="col-lg-4 ">
+              <h1>1 ou 6</h1>
+              <div class="card1">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% elif foorloop.counter == 3 %}
+            <div class="col-lg-4 ">
+              <h1>1 ou 6</h1>
+              <div class="card1">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% elif foorloop.counter == 4 %}
+            <div class="col-lg-4 ">
+              <h1>1 ou 6</h1>
+              <div class="card1">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% elif foorloop.counter == 5 %}
+            <div class="col-lg-4 ">
+              <h1>1 ou 6</h1>
+              <div class="card3">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% else %}
+            <div class="col-lg-4 ">
+              <div class="card2">
+                <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
+                <h4>{{ item.titulo }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+          {% endif %}
         {% endfor %}
 
-        <!--<div class="col-lg-4">
-          <div class="card2">
-            <img src="imagens/projetos2.png" alt="escola">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card3">
-            <img src="imagens/projetos3.png" alt="escola">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 ">
-          <div class="card2">
-            <img src="imagens/projetos1.png" alt="escola">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card3">
-            <img src="imagens/projetos2.png" alt="escola">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card1">
-            <img src="imagens/projetos3.png" alt="escola">
-            <h4>TÍTULO</h4>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen book</p>
-          </div>
-        </div>
-        -->
         {% if Projetos.has_other_pages %}
           <div class="col-lg-12 passador">
               <ul class="pagination row">
@@ -133,16 +135,19 @@
         <div class="row">
           <div class="col-lg-4">
             <h1 style="color: #0E4DC7;">Fale com a diretora</h1>
-            <div class="forms">
-              <input class="form-control" type="text" placeholder="Digite seu nome">
-              <input class="form-control" type="text" placeholder="Digite seu telefone">
-              <div class="form-grup">
-                <input class="form-control" type="text" placeholder="Digite sua mensagem">
+            <form method = "POST">
+              {% csrf_token %}
+              <div class="forms">
+                {{ form1.nome }}
+                {{ form1.telefone }}
+                <div class="form-group">
+                  {{ form1.mensagem }}
+                </div>
               </div>
-            </div>
-            <div class="mais">
-              <button name="#" id="" class="btn btn-primary" href="#" type="submit">ENVIAR</button>
-            </div>
+              <div class="mais">
+                <button name="#" id="" class="btn btn-primary" href="#" type="submit">ENVIAR</button>
+              </div>
+            </form>
           </div>
           <div class="col-lg-4">
             <h1 style="color:#3EBB51;">Contatos</h1>
@@ -179,8 +184,8 @@
   </footer>
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'slick/slick/slick.min.js' %}"></script>
-  <script src="{% static 'slick/Function.js' %}"></script>
+  <!--<script type="text/javascript" src="{% static 'slick/slick/slick.min.js' %}"></script>
+  <script src="{% static 'slick/Function.js' %}"></script>-->
 </body>
 
 </html>
