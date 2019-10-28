@@ -75,6 +75,12 @@ def blogProjetos(request):
     models_context['Contatos'] = Contatos.objects.all()
     models_context['Projetos'] = proj
 
+    forms_context = {
+        'form1': Contato()
+    }
+
+    data = {**models_context, **forms_context}
+
     #Utilização do form
     if request.method is 'POST':
         form1 = Contato(request.POST)
@@ -86,10 +92,7 @@ def blogProjetos(request):
 
             #RESETANDO OS FORMS
             form1 = Contato()
-    else:
-        form1 = Contato()
 
-    data = {**models_context, **forms_context}
     return render(request, 'projetos.html', data)
 
 
