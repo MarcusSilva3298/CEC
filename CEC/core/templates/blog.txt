@@ -1,15 +1,5 @@
-<!DOCTYPE html>
+COLINHA DO PAGINADOR REAL
 <body>
-    <div style="background-color: crimson;">
-        {% for item in Projetos %}
-            <div>
-                <h1> {{ item.titulo }} </h1>
-            </div>
-            <div>
-                <p> {{ item.desc }} </p>
-            </div>
-        {% endfor %}
-    </div> 
     <div style = "background-color: brown;">
         <h1>Paginador</h1>
         {% if Projetos.has_other_pages %}

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-br">
+{% load static %}
+
+<head>
+  <title>CEC Baby</title>
+  <!--Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <!--css-->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/projetos.css' %}" />
+  <!--Links para o slick-->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <!--Bootstrap CSS-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+    <a class="navbar-brand" href="#banner"><img src="imagens/logo.png" class="logo" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"> <a class="nav-link" href="#projetos" style="color: #3EBB51;">INÍCIO<span
+              class="sr-only">(current)</span></a> </li>
+        <li class="nav-item"><a class="nav-link" href="index.html" style="color: #4F78C7;">SITE</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contatos" style="color: #F6C101;">CONTATOS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Projetos-->
+  <section class="projetos" id="projetos">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="home">
+            <a href="index.html"><img src="imagens/casa.png" alt="casa"></a>
+            <p> > Projetos</p>
+          </div>
+          <div class="titulo">
+            <h1 style="color:#F6C101;">Conheça nossos projetos</h1>
+          </div>
+        </div>
+
+        {% for item in Projetos %}
+        <div class="col-lg-4 ">
+          <div class="card1">
+            <img src="imagens/projetos1.png" alt="escola">
+            <h4>{{ item.titulo }}</h4>
+            <p>{{item.desc}}</p>
+          </div>
+        </div>
+        {% endfor %}
+
+        <!--<div class="col-lg-4">
+          <div class="card2">
+            <img src="imagens/projetos2.png" alt="escola">
+            <h4>TÍTULO</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to make a type specimen book</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card3">
+            <img src="imagens/projetos3.png" alt="escola">
+            <h4>TÍTULO</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to make a type specimen book</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 ">
+          <div class="card2">
+            <img src="imagens/projetos1.png" alt="escola">
+            <h4>TÍTULO</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to make a type specimen book</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card3">
+            <img src="imagens/projetos2.png" alt="escola">
+            <h4>TÍTULO</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to make a type specimen book</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card1">
+            <img src="imagens/projetos3.png" alt="escola">
+            <h4>TÍTULO</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+              took a galley of type and scrambled it to make a type specimen book</p>
+          </div>
+        </div>
+        -->
+        {% if Projetos.has_other_pages %}
+          <div class="col-lg-12 passador">
+              <ul class="pagination row">
+                  {% for i in Projetos.paginator.page_range %}
+                    {% if Projetos.number == i %}
+                        <li class="active">{{ i }}</li>
+                    {% else %}
+                        <li><a class="other_pages" href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+              </ul>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  <!--Fim Projetos-->
+
+  <!--Contatos-->
+  <section class="contatos" id="contatos">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4">
+          <h1 style="color: #0E4DC7;">Fale com a diretora</h1>
+          <div class="forms">
+            <input class="form-control" type="text" placeholder="Digite seu nome">
+            <input class="form-control" type="text" placeholder="Digite seu telefone">
+            <div class="form-grup">
+              <input class="form-control" type="text" placeholder="Digite sua mensagem">
+            </div>
+          </div>
+          <div class="mais">
+            <button name="" id="" class="btn btn-primary" href="#" type="submit">ENVIAR</button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h1 style="color:#3EBB51;">Contatos</h1>
+          <div class="contatos-text">
+            <img src="imagens/fone.png" alt="telefone">
+            <p>(DDD) X XXXX-XXXX</p>
+          </div>
+          <div class="contatos-text">
+            <img src="imagens/e-mail.png" alt="e-mail">
+            <p>cecbaby@gmail.com</p>
+          </div>
+          <div class="social">
+            <a href="#" target="blank"><img src="imagens/face.png" alt="facebook"></a>
+            <a href="#" target="blank"><img src="imagens/insta.png" alt="instagram"></a>
+            <a href="#" target="blank"><img src="imagens/wpp.png" alt="whatsapp"></a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h1 style="color:#DA3838;">Onde estamos</h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15878.47517478385!2d-35.2029964!3d-5.7678647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6cee4670bab6ee3a!2sCEC%20Baby!5e0!3m2!1spt-BR!2sbr!4v1571604643865!5m2!1spt-BR!2sbr"
+            width="260" height="240" frameborder="0" style="border:0;" allowfullscreen="">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Fim Contatos-->
+  <footer>
+    <p><b>CEC Baby</b> © 2019 . Desenvolvido pela</p>
+    <a href="http://www.ejectufrn.com.br" target="_blank"><img src="imagens/eject.png" alt="eject"></a>
+  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="Function.js"></script>
+</body>
+
+</html>

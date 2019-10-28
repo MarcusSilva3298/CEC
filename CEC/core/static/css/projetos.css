@@ -1,0 +1,71 @@
+.col-lg-4{
+    margin-bottom: 9%;
+}
+.projetos{
+    padding-top: 50px;
+    padding-bottom: 7% !important;
+    background: #F2F2F2 !important;
+}
+
+.projetos h1{
+    font-size: 48px !important;
+    margin-bottom: 7% !important;
+}
+
+.home p{
+    font-size: 14px !important;
+    color: #828282 ;
+    padding: 0 !important;
+    margin-bottom: 8%;
+    text-indent: 0px !important;
+    word-spacing: 8px;
+    display: inline-block;
+}
+
+.home img{
+    margin-right: 10px;
+}
+
+.passador {
+    text-align: center ;
+}
+
+.passador .active{
+    background: #F6C101;
+    font-size: 0.001rem !important;
+    line-height: 0.001rem !important;
+    text-indent: 0 !important;
+    padding: 0.55rem 0.45rem 0.55rem 0.45rem;
+    margin: 5px;
+    border-radius: 100%;
+    display: inline-block;
+    color: #F6C101 !important;
+}
+
+.passador .other_pages{
+    background: #F6D86C;
+    font-size: 0.001rem !important;
+    line-height: 0.001rem !important;
+    text-indent: 0 !important;
+    padding: 0.55rem 0.45rem 0.55rem 0.45rem;
+    margin: 5px;
+    border-radius: 100%;
+    display: inline-block;
+    color: #F6D86C !important;
+}
+
+
+.card1{
+    background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #DA3838 91px, #DA3838 100%) !important;
+    height: 440px;
+}
+
+.card2{
+    background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #4F78C7 91px, #4F78C7 100%) !important;
+    height: 440px;
+}
+
+.card3{
+    background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #F6C101 91px, #F6C101 100%) !important;
+    height: 440px;
+}

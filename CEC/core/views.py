@@ -90,7 +90,7 @@ def blogProjetos(request):
         form1 = Contato()
 
     data = {**models_context, **forms_context}
-    return render(request, 'blog.html', data)
+    return render(request, 'projetos.html', data)
 
 
 def postProjeto(request, slug):
