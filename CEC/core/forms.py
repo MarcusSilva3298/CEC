@@ -68,16 +68,23 @@ class Contato(forms.Form):
     nome = forms.CharField(
         error_messages = {'required': 'Por favor, insira seu nome'},
         widget = forms.TextInput( attrs= {
-            
+            'class': 'form-control',
+            'placeholder': 'Digite seu nome'
         })
     )
     telefone = forms.CharField(
         error_messages = {'required': 'Por favor, insira seu telefone'},
-        widget = forms.TextInput( attrs= {})
+        widget = forms.TextInput( attrs= {
+            'class': 'form-control',
+            'placeholder': 'Digite seu telefone'
+        })
     )
     mensagem = forms.CharField(
         error_messages = {'required': 'Por favor, insira uma mensagem'},
-        widget = forms.Textarea( attrs= {})
+        widget = forms.Textarea( attrs= {
+            'class': 'form-control',
+            'placeholder': 'Digite sua mensagem'
+        })
     )
 
     def send_mail(self):
