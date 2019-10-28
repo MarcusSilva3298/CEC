@@ -26,10 +26,6 @@
     margin-right: 10px;
 }
 
-.passador {
-    text-align: center ;
-}
-
 .passador .active{
     background: #F6C101;
     font-size: 0.001rem !important;
