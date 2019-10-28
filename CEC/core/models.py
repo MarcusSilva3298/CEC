@@ -5,7 +5,7 @@ from ckeditor.fields import RichTextField
 class Projetos(models.Model):
     titulo = models.CharField('Titulo do Projeto', max_length = 100, default = 'Projeto', unique = True)
     atalho = models.SlugField('Atalho', max_length = 100, default = 'Nome-do-Projeto', unique = True)
-    desc = models.TextField('Descrição rápida do projeto', default = 'Descrição do projeto') #max = 260 caracteres
+    desc = models.TextField('Descrição rápida do projeto', default = 'Descrição do projeto', max_length = 260)
     content = RichTextField('Conteúdo do Post do Projeto')
     start_date = models.DateField('Data de criação do Post', auto_now = True)
     img_ic = models.ImageField(verbose_name = 'Imagem ícone do projeto', upload_to = 'img/projeto/icone')
