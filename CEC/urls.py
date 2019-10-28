@@ -22,8 +22,8 @@ from django.conf.urls.static import static
 from .core.views import home, blogProjetos, postProjeto
 
 urlpatterns = [
-    path('', home),
-    path('Projetos', blogProjetos),
-    path('Projetos/<str:slug>/', postProjeto),
+    path('', home, name = 'Home'),
+    path('Projetos', blogProjetos, name = 'Projetos'),
+    path('Projetos/<str:slug>/', postProjeto, name = 'Post'),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
