@@ -87,7 +87,7 @@
           </div>
         </div>
         {% for item in Projetos %}
-          {% if forloop.counter is 1 %}
+          {% if forloop.counter == 1 %}
             <div class="col-lg-4 ">
               <div class="card1">
                 <img src="{{ item.img_ic.url }}" alt="{{ item.titulo }}">
@@ -95,7 +95,7 @@
                 <p>{{ item.desc }}</p>
               </div>
             </div>
-          {% elif forloop.counter is 2 %}
+          {% elif forloop.counter == 2 %}
             <div class="col-lg-4 ">
               <div class="card2">
                 <img src="{{ item.img_ic.url }}" alt="{{ item.titulo }}">
@@ -103,7 +103,7 @@
                 <p>{{ item.desc }}</p>
               </div>
             </div>
-          {% elif forloop.counter is 3 %}
+          {% elif forloop.counter == 3 %}
             <div class="col-lg-4 ">
               <div class="card3">
                 <img src="{{ item.img_ic.url }}" alt="{{ item.titulo }}">

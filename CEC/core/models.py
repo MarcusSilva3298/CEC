@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 class Projetos(models.Model):
     titulo = models.CharField('Titulo do Projeto', max_length = 100, default = 'Projeto', unique = True)
-    atalho = models.SlugField('Atalho', max_length = 100, default = 'Nome-do-Projeto', unique = True)
+    atalho = models.SlugField('Atalho', max_length = 100, unique = True)
     desc = models.TextField('Descrição rápida do projeto', default = 'Descrição do projeto', max_length = 260)
     content = RichTextField('Conteúdo do Post do Projeto')
     start_date = models.DateField('Data de criação do Post', auto_now = True)

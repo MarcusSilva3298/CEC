@@ -1,8 +1,11 @@
 from django.contrib import admin
 from .models import Ensino, Evento, PropostaPedagogica, Aplicativo, Galeria, Contatos, Valores, Projetos
 
-# Register your models here.
-admin.site.register(Projetos)
+
+class ProjetosAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"atalho": ["titulo"]}
+
+admin.site.register(Projetos, ProjetosAdmin)
 admin.site.register(Ensino)
 admin.site.register(Evento)
 admin.site.register(PropostaPedagogica)
