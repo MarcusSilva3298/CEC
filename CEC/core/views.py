@@ -8,7 +8,6 @@ from .forms import Matricula, Contato
 def home(request):
     #Def dos Dic's
     models_context = {}
-    forms_context = {}
 
     #Impotação dos models
     models_context['Ensino'] = Ensino.objects.all()
@@ -20,13 +19,7 @@ def home(request):
     models_context['Contatos'] = Contatos.objects.all()
     models_context['Projetos'] = Projetos.objects.order_by('-start_date')[:3]
 
-    forms_context = {
-        'form': Matricula(),
-        'form1': Contato()
-    }
-
-    data = { **models_context, **forms_context}
-
+    
     #Utilização dos forms
     if request.method == 'POST':
         #Importação dos forms
@@ -38,18 +31,17 @@ def home(request):
             print(form.cleaned_data)
             form.send_mail()
 
-            #RESETANDO OS FORMS
-            form = Matricula()
-            form1 =  Contato()
-
         if form1.is_valid():
             forms_context['is_valid'] = True
             print(form1.cleaned_data)
             form1.send_mail()
 
-            #RESETANDO OS FORMS
-            form = Matricula()
-            form1 =  Contato()
+    forms_context = {
+        'form': Matricula(),
+        'form1': Contato()
+    }
+
+    data = { **models_context, **forms_context}
 
     return render(request, 'index.html', data)
 
@@ -57,7 +49,6 @@ def home(request):
 def blogProjetos(request):
     #Def dos Dic's
     models_context = {}
-    forms_context = {}
 
     #Def paginador
     proj_list = Projetos.objects.order_by('-start_date')
@@ -75,12 +66,6 @@ def blogProjetos(request):
     models_context['Contatos'] = Contatos.objects.all()
     models_context['Projetos'] = proj
 
-    forms_context = {
-        'form1': Contato()
-    }
-
-    data = {**models_context, **forms_context}
-
     #Utilização do form
     if request.method is 'POST':
         form1 = Contato(request.POST)
@@ -90,8 +75,11 @@ def blogProjetos(request):
             print(form1.cleaned_data)
             form1.send_mail()
 
-            #RESETANDO OS FORMS
-            form1 = Contato()
+    forms_context = {
+        'form1': Contato()
+    }
+
+    data = {**models_context, **forms_context}
 
     return render(request, 'projetos.html', data)
 
@@ -99,7 +87,6 @@ def blogProjetos(request):
 def postProjeto(request, slug):
     print(slug)
     models_context = {}
-    forms_context = {}
 
     models_context['Contatos'] = Contatos.objects.all()
     models_context['projeto'] = get_object_or_404(Projetos, atalho = slug)
@@ -114,10 +101,11 @@ def postProjeto(request, slug):
             form1.send_mail()
 
             #RESETANDO OS FORMS
-            form1 = Contato()
-    else:
-        form1 = Contato()
+    
+    forms_context = {
+        'form1': Contato()
+    }
 
     data = {**models_context, **forms_context}
 
-    return render(request, 'post.html', data)
+    return render(request, 'page-projeto.html', data)

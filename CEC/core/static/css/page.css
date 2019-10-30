@@ -1,0 +1,60 @@
+.page-p{
+    height: 600px;
+    width: 100%;
+    position: absolute;
+}
+.proj-titulo h1{
+    color: #FFFCF3;
+    font-size: 48px;
+}
+
+.proj-titulo{
+    margin-top: 12%;
+    margin-bottom: 6%;  
+}
+
+.bg-proj{
+    background: #F2F2F2;
+}
+
+.texto{
+    background: #F2F2F2;
+    display: flex;
+}
+
+.estrutura{
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 12%;
+}
+
+.corpo p{
+    line-height: 5%;
+    text-indent: 0 !important;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1.35px;
+}
+
+.legenda{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 12px !important;
+    line-height: 40px; 
+    text-indent: 0 !important;
+    color: #333333;
+    padding-bottom: 6% !important;
+}
+
+.estrutura h3{
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    padding-bottom: 3%;
+}
+
+.estrutura-img{
+    text-align: center;
+}
