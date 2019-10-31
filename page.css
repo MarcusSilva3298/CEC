@@ -1,0 +1,59 @@
+.page-p{
+    background-image: url("imagens/page-bg.jpg");
+    background-color: #F2F2F2;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+}
+.proj-titulo h1{
+    color: #FFFCF3;
+    font-size: 48px;
+}
+
+.proj-titulo{
+    margin-top: 12%;
+    margin-bottom: 6%;  
+}
+
+.bg-proj{
+    background: #F2F2F2;
+}
+
+.texto{
+    background: #F2F2F2;
+    display: flex;
+}
+
+.estrutura{
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.estrutura p{
+    padding-bottom: 12%;
+    text-indent: 0 !important;
+}
+
+.legenda{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 12px !important;
+    line-height: 40px; 
+    text-indent: 0 !important;
+    color: #333333;
+    padding-bottom: 6% !important;
+}
+
+.estrutura h3{
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    padding-bottom: 3%;
+}
+
+.estrutura-img{
+    text-align: center;
+}
