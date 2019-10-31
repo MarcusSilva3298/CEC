@@ -1,6 +1,7 @@
 .col-lg-4{
     margin-bottom: 9%;
 }
+
 .projetos{
     padding-top: 50px;
     padding-bottom: 7% !important;
@@ -42,18 +43,35 @@
     color: #F6D86C !important;
 }
 
+.projetos .btn{
+    background: #F2F2F2 !important;
+    padding:8px 45px 8px 45px !important;
+    font-size: 18px !important;
+}
 
 .card1{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #DA3838 91px, #DA3838 100%) !important;
-    height: 440px;
+    height: 510px;
+}
+
+.card1 .btn , .card1 .btn-primary:hover{
+    color: #DA3838;
 }
 
 .card2{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #4F78C7 91px, #4F78C7 100%) !important;
-    height: 440px;
+    height: 510px;
+}
+
+.card2 .btn, .card2 .btn-primary:hover{
+    color: #4F78C7;
 }
 
 .card3{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #F6C101 91px, #F6C101 100%) !important;
-    height: 440px;
+    height: 510px;
+}
+
+.card3 .btn, .card3 .btn-primary:hover{
+    color: #F6C101;
 }
