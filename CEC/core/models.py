@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 
 # Create your models here.
 class Projetos(models.Model):
@@ -17,6 +18,9 @@ class Projetos(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    def get_absolute_url(self):
+        return f'Projetos/{self.atalho}'
 
 class Ensino(models.Model):
     subtitulo = models.CharField('Subtítulo', max_length = 100, default = 'Subtítulo')

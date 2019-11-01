@@ -85,7 +85,6 @@ def blogProjetos(request):
 
 
 def postProjeto(request, slug):
-    print(slug)
     models_context = {}
 
     models_context['Contatos'] = Contatos.objects.all()

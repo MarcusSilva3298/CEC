@@ -3,6 +3,7 @@
     width: 100%;
     position: absolute;
 }
+
 .proj-titulo h1{
     color: #FFFCF3;
     font-size: 48px;
@@ -29,15 +30,6 @@
     padding-bottom: 12%;
 }
 
-.corpo p{
-    line-height: 5%;
-    text-indent: 0 !important;
-    font-family: Montserrat;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 1.35px;
-}
-
 .legenda{
     font-family: Roboto;
     font-weight: 300;
@@ -57,4 +49,8 @@
 
 .estrutura-img{
     text-align: center;
+}
+
+.estrutura-text body h1{
+    font-family: 'Times New Roman', Times, serif
 }

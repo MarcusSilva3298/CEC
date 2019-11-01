@@ -3,7 +3,6 @@
 <html lang="pt-br">
 
 <head>
-  <title>CEC Baby</title>
   <link rel="sortcut icon" href="{% static 'img/logo.png' %}" type="image/png" />
   <!--Required meta tags-->
   <meta charset="utf-8">
@@ -22,6 +21,9 @@
   <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick-theme.css' %}" />
   <!--Bootstrap CSS-->
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <meta name="Description"
+  content="#">
+  <title>CEC Baby</title>
 </head>
 
 <body>
@@ -64,25 +66,8 @@
             <p> > </p>
             <p>{{ projeto.titulo }}</p>
           </div>
-          <div class="corpo"></div>
-            <p>{{ projeto.content | safe }}</p>
-            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-              esse cillum dolore eu fugiat nulla pariatur.</p>
-            <div class="estrutura-img">
-            <img class="img-fluid" src="{% static 'img/img-corpo.jpg' %}" alt="criança brincando">
-            </div>
-            <p class="legenda">Criança aprendendo. Foto: Vitor Carvalho</p>
-            <h3>Subtítulo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur.</p>-->
+          <div class="estrutura-text"></div>
+            {{ projeto.content | safe }}
           </div>
         </div>
       </div>
@@ -106,7 +91,7 @@
                 </div>
               </div>
               <div class="mais">
-                <button name="#" id="" class="btn btn-primary" href="#" type="submit">ENVIAR</button>
+                <button name="button" id="button" class="btn btn-primary" href="#" type="submit">ENVIAR</button>
               </div>
             </form>
           </div>
