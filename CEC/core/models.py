@@ -8,7 +8,7 @@ class Projetos(models.Model):
     atalho = models.SlugField('Atalho', max_length = 100, unique = True)
     desc = models.TextField('Descrição rápida do projeto', default = 'Descrição do projeto', max_length = 260)
     content = RichTextField('Conteúdo do Post do Projeto')
-    start_date = models.DateField('Data de criação do Post', auto_now = True)
+    start_date = models.DateField('Data de criação do Post', auto_now_add = True)
     img_ic = models.ImageField(verbose_name = 'Imagem ícone do projeto', upload_to = 'img/projeto/icone')
     img_bn = models.ImageField(verbose_name = 'Imagem banner do projeto', upload_to = 'img/projeto/banner')
 
