@@ -70,6 +70,10 @@
 
 .card1 .btn , .card1 .btn-primary:hover{
     color: #DA3838;
+    position: absolute;
+    top: 86%;
+    right: 95px;
+    left: 95px;
 }
 
 .card2{
@@ -79,6 +83,10 @@
 
 .card2 .btn, .card2 .btn-primary:hover{
     color: #4F78C7;
+    position: absolute;
+    top: 86%;
+    right: 95px;
+    left: 95px;
 }
 
 .card3{
@@ -88,4 +96,39 @@
 
 .card3 .btn, .card3 .btn-primary:hover{
     color: #F6C101;
+    position: absolute;
+    top: 86%;
+    right: 95px;
+    left: 95px;
+}
+
+
+@media (max-width: 1400px){
+    .card1 .btn , .card1 .btn-primary:hover{
+        right: 70px;
+        left: 70px;
+    }
+    .card2 .btn, .card2 .btn-primary:hover{
+        right: 70px;
+        left: 70px;
+    }
+    .card3 .btn, .card3 .btn-primary:hover{
+        right: 70px;
+        left: 70px;
+    }
+}
+
+@media (max-width: 1200px){
+    .card1 .btn , .card1 .btn-primary:hover{
+        right: 45px;
+        left: 45px;
+    }
+    .card2 .btn, .card2 .btn-primary:hover{
+        right: 45px;
+        left: 45px;
+    }
+    .card3 .btn, .card3 .btn-primary:hover{
+        right: 45px;
+        left: 45px;
+    }
 } 

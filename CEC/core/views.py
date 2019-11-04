@@ -98,8 +98,6 @@ def postProjeto(request, slug):
             forms_context['is_valid'] = True
             print(form1.cleaned_data)
             form1.send_mail()
-
-            #RESETANDO OS FORMS
     
     forms_context = {
         'form1': Contato()
