@@ -1,6 +1,7 @@
 .col-lg-4{
     margin-bottom: 9%;
 }
+
 .projetos{
     padding-top: 50px;
     padding-bottom: 7% !important;
@@ -25,9 +26,11 @@
 .home img{
     margin-right: 10px;
 }
-.passador{
-    text-align: center;
+
+.passador {
+    text-align: center ;
 }
+
 .passador li{
     list-style: none;
     display: inline-block;
@@ -102,7 +105,6 @@
     left: 95px;
 }
 
-
 @media (max-width: 1400px){
     .card1 .btn , .card1 .btn-primary:hover{
         right: 70px;
@@ -131,4 +133,4 @@
         right: 45px;
         left: 45px;
     }
-} 
+}

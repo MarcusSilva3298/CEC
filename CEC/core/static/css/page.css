@@ -24,13 +24,18 @@
 }
 
 .estrutura{
+    background: pink;
     padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 12%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.legenda{
+.estrutura p{
+    padding-bottom: 12%;
+    text-indent: 0 !important;
+}
+
+h6{
     font-family: Roboto;
     font-weight: 300;
     font-size: 12px !important;
@@ -40,17 +45,17 @@
     padding-bottom: 6% !important;
 }
 
-.estrutura h3{
+.estrutura-text h3{
     font-size: 18px;
     line-height: 22px;
     color: #333333;
     padding-bottom: 3%;
 }
 
-.estrutura-img{
+.estrutura-text img{
     text-align: center;
 }
 
-.estrutura-text body h1{
-    font-family: 'Times New Roman', Times, serif
+.estrutura-text p{
+    background: brown;
 }

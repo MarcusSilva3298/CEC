@@ -6,7 +6,6 @@ from .forms import Matricula, Contato
 
 # Create your views here.
 def home(request):
-    #Def dos Dic's
     models_context = {}
 
     #Impotação dos models
@@ -32,6 +31,7 @@ def home(request):
             form.send_mail()
 
         if form1.is_valid():
+            forms_context = { 'form1': Contato() }
             forms_context['is_valid'] = True
             print(form1.cleaned_data)
             form1.send_mail()
