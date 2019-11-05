@@ -1,7 +1,6 @@
 body{
 padding-top: 86px;
 }
-
 /*fontes*/
 h1{
     font-family: 'Pacifico', cursive;
@@ -62,7 +61,6 @@ p{
     text-indent: 40px !important;
     color: #4F4F4F;
 }
-
 .navbar a{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -144,7 +142,6 @@ p{
     margin-bottom: 26% !important;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
-
 /*Ensino*/
 .ensino{
     background: url(imagens/ensino.png);
@@ -155,7 +152,7 @@ p{
 }
 
 .ensino h1{
-    padding-bottom: 3.5%;
+padding-bottom: 3.5%;
 }
 
 .ensino p{
@@ -168,6 +165,7 @@ p{
     padding-left: 6px;
 }
 
+
 /*Aplicativo*/
 .aplicativo{
     background: #FBFBFB;
@@ -178,7 +176,6 @@ p{
 .aplicativo h1{
     padding-bottom: 6%;
 }
-
 .aplicativo p {
     margin-top: 6%;
 }
@@ -186,7 +183,6 @@ p{
 .aplicativo .col-lg-5{
     text-align: center;
 }
-
 .aplicativo p{
     padding-left: 4%;
 }
@@ -257,7 +253,7 @@ p{
     color: #FFFCF3;
     padding-left: 7%;
     padding-right: 7%;
-    padding-bottom: 2%;
+    padding-bottom: 10%;
     text-align: left !important;
 }
 
@@ -424,7 +420,6 @@ width: 100px;
     padding: 0 !important;
     
 }
-
 .evento .row{
     margin: 0 !important;
 }
@@ -438,7 +433,6 @@ width: 100px;
     padding-right: 60px;
 
 }
-
 .card-evento .titulo h1{
     text-align: center;
 }
