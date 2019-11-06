@@ -24,7 +24,6 @@
 }
 
 .estrutura{
-    background: pink;
     padding-top: 3%;
     padding-left: 10px;
     padding-right: 10px;
@@ -46,17 +45,37 @@ h6{
 }
 
 .estrutura-text h3{
+    font-family: Montserrat;
+    font-weight: bold;
     font-size: 18px;
     line-height: 22px;
     color: #333333;
     padding-bottom: 3%;
 }
 
-.estrutura-text img{
-    text-align: center;
-    margin: 0px;
+.estrutura-text p{
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1.35px;
+    color: #4F4F4F;
+    padding-bottom: 3%;
 }
 
-.estrutura-text p{
-    background: brown;
+.home .Titulo{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4F4F4F;
+}
+
+.estrutura-text img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -3,7 +3,6 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="sortcut icon" href="{% static 'img/logo.png' %}" type="image/png" />
   <!--Required meta tags-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,7 +45,7 @@
   </nav>
 
   <!--Projetos                                         {{ projeo.img_bn.url }}-->
-  <div class="page-p" style = "background-image: url( {% static 'css/imagens/page-bg.jpg' %} ); background-color: #F2F2F2; background-size:cover; background-repeat: no-repeat;"></div>
+  <div class="page-p" style = "background-image: url( {{ projeto.img_bn.url }} ); background-color: #F2F2F2; background-size:cover; background-repeat: no-repeat;"></div>
   <div class="container-fluid proj-titulo">
     <div class="row">
       <div class="col-lg-12">
@@ -65,7 +64,7 @@
             <p> > </p>
             <a href="{% url 'Projetos' %}"><p>Projetos </p></a>
             <p> > </p>
-            <p>{{ projeto.titulo }}</p>
+            <p class="Titulo">{{ projeto.titulo }}</p>
           </div>
           <div class="estrutura-text">
             <p>
