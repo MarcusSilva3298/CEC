@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.template.response import TemplateResponse
 
 #VIEWS
 from .core.views import home, blogProjetos, postProjeto
@@ -26,4 +27,5 @@ urlpatterns = [
     path('Projetos', blogProjetos, name = 'Projetos'),
     path('Projetos/<str:slug>/', postProjeto, name = 'Post'),
     path('admin/', admin.site.urls),
+    path('', TemplateResponse, {'template': 'erro.html'})
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
