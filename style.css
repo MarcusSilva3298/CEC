@@ -266,18 +266,52 @@ padding-bottom: 3.5%;
 }
 
 .card1{
-    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 91px, #DA3838 91px, #DA3838 100%);
-    height: 440px;
+    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 91px, #DA3838 91px, #DA3838 100%) !important;
+    height: 510px;
+}
+
+.card1 .btn , .card1 .btn-primary:hover{
+    color: #DA3838;
+    position: absolute;
+    top: 86%;
+    right: 95px;
+    left: 95px;
 }
 
 .card2{
-    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 91px, #4F78C7 91px, #4F78C7 100%);
-    height: 440px;
+    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 91px, #4F78C7 91px, #4F78C7 100%) !important;
+    height: 510px;
+}
+
+.card2 .btn, .card2 .btn-primary:hover{
+    color: #4F78C7;
+    position: absolute;
+    top: 86%;
+    right: 95px;
+    left: 95px;
 }
 
 .card3{
-    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 91px, #F6C101 91px, #F6C101 100%);
-    height: 440px;
+    background: linear-gradient(to bottom, #FBFBFB 0%, #FBFBFB 91px, #F6C101 91px, #F6C101 100%) !important;
+    height: 510px;
+}
+
+.card3 .btn, .card3 .btn-primary:hover{
+    color: #F6C101;
+    position: absolute;
+    top: 86%;
+    right: 95px;
+    left: 95px;
+}
+
+.projetos .col-lg-4{
+    margin-bottom: 9%;
+}
+
+.projetos .btn{
+    background: #F2F2F2 !important;
+    padding:8px 45px 8px 45px !important;
+    font-size: 18px !important;
 }
 
 .botao-p{
