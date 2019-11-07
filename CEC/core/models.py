@@ -36,7 +36,7 @@ class Ensino(models.Model):
 class Evento(models.Model):
     titulo = models.CharField('Título do evento', default = 'Próximo Evento', max_length = 50)
     img = models.ImageField(verbose_name = 'Imagem do evento', upload_to = 'img/evento')
-    desc = models.TextField('Descrição do evento')
+    desc = models.TextField('Descrição do evento', max_length = 483)
 
     class Meta:
         verbose_name = 'Evento'
