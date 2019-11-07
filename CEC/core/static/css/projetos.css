@@ -31,78 +31,29 @@
     text-align: center ;
 }
 
-.passador li{
-    list-style: none;
-    display: inline-block;
-}
-.passador .active{
-    display: inline-block;
-    color: #F6C101 !important;
-    font-family: Montserrat;
-    font-size: 18px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.passador .other_pages{
+.passador a{
+    background: #F6D86C;
+    font-size: 0.001rem !important;
+    line-height: 0.001rem !important;
+    text-indent: 0 !important;
+    padding: 0.55rem 0.45rem 0.55rem 0.45rem;
+    margin: 5px;
+    border-radius: 100%;
     display: inline-block;
     color: #F6D86C !important;
-    font-family: Montserrat;
-    font-size: 18px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
-.setas{
-    height: 30%;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 4px;
-}
-
-.projetos .btn{
-    background: #F2F2F2 !important;
-    padding:8px 45px 8px 45px !important;
-    font-size: 18px !important;
-}
 
 .card1{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #DA3838 91px, #DA3838 100%) !important;
-    height: 510px;
-}
-
-.card1 .btn , .card1 .btn-primary:hover{
-    color: #DA3838;
-    position: absolute;
-    top: 86%;
-    right: 95px;
-    left: 95px;
 }
 
 .card2{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #4F78C7 91px, #4F78C7 100%) !important;
-    height: 510px;
-}
-
-.card2 .btn, .card2 .btn-primary:hover{
-    color: #4F78C7;
-    position: absolute;
-    top: 86%;
-    right: 95px;
-    left: 95px;
 }
 
 .card3{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #F6C101 91px, #F6C101 100%) !important;
-    height: 510px;
-}
-
-.card3 .btn, .card3 .btn-primary:hover{
-    color: #F6C101;
-    position: absolute;
-    top: 86%;
-    right: 95px;
-    left: 95px;
 }
 
 @media (max-width: 1400px){
