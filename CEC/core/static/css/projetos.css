@@ -27,22 +27,39 @@
     margin-right: 10px;
 }
 
-.passador {
-    text-align: center ;
+.passador{
+    text-align: center;
 }
 
-.passador a{
-    background: #F6D86C;
-    font-size: 0.001rem !important;
-    line-height: 0.001rem !important;
-    text-indent: 0 !important;
-    padding: 0.55rem 0.45rem 0.55rem 0.45rem;
-    margin: 5px;
-    border-radius: 100%;
+.passador li{
+    list-style: none;
+    display: inline-block;
+}
+
+.passador .active{
+    display: inline-block;
+    color: #F6C101 !important;
+    font-family: Montserrat;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.passador .other_pages{
     display: inline-block;
     color: #F6D86C !important;
+    font-family: Montserrat;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
+.setas{
+    height: 30%;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
 
 .card1{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #DA3838 91px, #DA3838 100%) !important;
