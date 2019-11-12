@@ -26,12 +26,17 @@ def home(request):
         }
         #Importação dos forms
         form = Matricula(request.POST)
-        form1 = Contato(request.POST)
+        form1 = Contato(request.POST)  
 
+        #print(form1.cleaned_data.telefone)
+        #print('-----------------')
+        #print(form.cleaned_data.telefone)
+        #print(form.is_valid())
         if form.is_valid():
             forms_context['is_valid'] = True
             print(form.cleaned_data)
             form.send_mail()
+        print(form.errors)
 
         if form1.is_valid():
             forms_context['is_valid'] = True
@@ -97,17 +102,18 @@ def postProjeto(request, slug):
     models_context['projeto'] = get_object_or_404(Projetos, atalho = slug)
 
     #Utilização do form
-    if request.method is 'POST':
+    if request.method == 'POST':
         forms_context = {
             'form1': Contato()
         }
+        #Importação dos forms
         form1 = Contato(request.POST)
 
-        if form1.is_valid:
+        if form1.is_valid():
             forms_context['is_valid'] = True
             print(form1.cleaned_data)
             form1.send_mail()
-    
+
     forms_context = {
         'form1': Contato()
     }

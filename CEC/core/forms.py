@@ -49,7 +49,6 @@ class Matricula(forms.Form):
 
     def send_mail(self):
         print('---------Email Matricula---------')
-        print(f'{DEFAULT_FROM_EMAIL}\n{CONTACT_EMAIL}')
         mensagem = 'Nome: %(nome_resp)s;\nTelefone: %(telefone)s;\nE-mail: %(email)s;\nNome da Criança: %(nome_cri)s;\nSerie: %(serie)s'
         subject = self.cleaned_data['email']
         context = {
