@@ -716,6 +716,10 @@ footer img{
     .banner{
         background-position-x: 12%;
     }
+    p{
+        text-align: left !important;
+        text-indent: 0px !important;
+    }
     h1,h3{
         text-align: center;
     }
