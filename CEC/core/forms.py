@@ -1,5 +1,6 @@
 from django import forms
 from django.core.mail import send_mail, EmailMessage
+from ..settings import DEFAULT_FROM_EMAIL, CONTACT_EMAIL
 
 class Matricula(forms.Form):
     #serie choices
@@ -48,7 +49,7 @@ class Matricula(forms.Form):
 
     def send_mail(self):
         print('---------Email Matricula---------')
-
+        print(f'{DEFAULT_FROM_EMAIL}\n{CONTACT_EMAIL}')
         mensagem = 'Nome: %(nome_resp)s;\nTelefone: %(telefone)s;\nE-mail: %(email)s;\nNome da Criança: %(nome_cri)s;\nSerie: %(serie)s'
         subject = self.cleaned_data['email']
         context = {
@@ -60,7 +61,7 @@ class Matricula(forms.Form):
         }
         mensagem = mensagem % context
         print(f'{subject}\n{mensagem}')
-        mail = EmailMessage( subject = subject, body = mensagem)#, from_email = settings.DEFAULT_FROM_EMAIL, to = settings.CONTACT_EMAIL)
+        mail = EmailMessage( subject = subject, body = mensagem, from_email = DEFAULT_FROM_EMAIL, to = [CONTACT_EMAIL])
         mail.send(fail_silently=False)
 
 
@@ -91,6 +92,7 @@ class Contato(forms.Form):
         print('---------Email Contato---------')
 
         mensagem = 'Nome: %(nome)s;\nTelefone: %(telefone)s;\nMensagem: %(mensagem)s'
+        subject = self.cleaned_data['nome']
         context = {
             'telefone': self.cleaned_data['telefone'],
             'nome': self.cleaned_data['nome'],
@@ -98,5 +100,5 @@ class Contato(forms.Form):
         }
         mensagem = mensagem % context
         print(f'{mensagem}')
-        mail = EmailMessage(body = mensagem)#, from_email = settings.DEFAULT_FROM_EMAIL, to = settings.CONTACT_EMAIL)
+        mail = EmailMessage(subject = subject, body = mensagem, from_email = DEFAULT_FROM_EMAIL, to = [CONTACT_EMAIL])
         mail.send(fail_silently=False)

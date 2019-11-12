@@ -68,7 +68,9 @@
           {% endif %}
               <img src="{{ item.img_ic.url }}" alt="{{ item.titulo}}_img">
               <h4>{{ item.titulo }}</h4>
-              <p>{{ item.desc }}</p>
+              <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
+                <p>{{ item.desc }}</p>
+              </div>
               <a name="button" id="button" class="btn btn-primary" href="{{ item.get_absolute_url }}" role="button">SAIBA MAIS</a>
             </div>
           </div>

@@ -124,7 +124,6 @@ p{
     font-size: 18px !important;
     line-height: 25px !important;
     text-align: center !important;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding:14px 35px 14px 35px !important;
     white-space: nowrap;
 }
@@ -315,7 +314,6 @@ padding-bottom: 3.5%;
 }
 
 .botao-p{
-    padding-top: 6%;
     text-align: center;
 }
 
@@ -604,7 +602,6 @@ footer img{
 
 .erro .container-fluid{
     padding-left: 12% !important;
-    padding-right: 1% !important;
 }
 
 .erro .btn{
@@ -617,12 +614,30 @@ footer img{
 }
 /*Responsivo*/
 @media (max-width: 1400px){
+    .scrollspy-example {
+        position: relative;
+        height: 180px;
+        margin-top: .5rem;
+        overflow: auto;
+    }
     .navbar a{
         padding-left: 8px !important;
         padding-right: 8px !important;
         margin-left: 8px;
         margin-right: 8px;
         font-size: 13px;
+    }
+    .card1 .btn , .card1 .btn-primary:hover{
+        right: 70px;
+        left: 70px;
+    }
+    .card2 .btn, .card2 .btn-primary:hover{
+        right: 70px;
+        left: 70px;
+    }
+    .card3 .btn, .card3 .btn-primary:hover{
+        right: 70px;
+        left: 70px;
     }
 }
 
@@ -646,6 +661,18 @@ footer img{
     .erro h3, .erro p,.erro h1, .erro h2, .erro .btn{
         margin-left: 0 !important;
         text-align: center;
+    }
+    .card1 .btn , .card1 .btn-primary:hover{
+        right: 45px;
+        left: 45px;
+    }
+    .card2 .btn, .card2 .btn-primary:hover{
+        right: 45px;
+        left: 45px;
+    }
+    .card3 .btn, .card3 .btn-primary:hover{
+        right: 45px;
+        left: 45px;
     }
 }
 
@@ -695,6 +722,9 @@ footer img{
     .propostas .col-sm-12 , .propostas .col-lg-4, .propostas .col-lg-12 {
         text-align: center;
     }
+    .propostas p{
+        padding-right: 0 !important;
+    }
     .titulo{
         white-space: pre-line;
         text-align: center;
@@ -710,9 +740,9 @@ footer img{
         padding-top: 0px;
     }
     .evento{
-        padding-top: 210px;
-        background-size: 100% auto;
-        background-position-y: 0%;
+        padding-top: 210px !important;
+        background-size: 100% auto !important;
+        background-position-y: 0% !important;
     }
     .enviar .btn {
         width: auto;

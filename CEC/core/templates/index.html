@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <!--css-->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'css/projetos.css' %}" />
   <!--Links para o slick-->
   <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'slick/slick/slick-theme.css' %}" />
@@ -102,7 +101,9 @@
           {% endif %}
               <img src="{{ item.img_ic.url }}" alt="{{ item.titulo }}">
               <h4>{{ item.titulo }}</h4>
-              <p>{{ item.desc }}</p>
+              <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
+                <p>{{ item.desc }}</p>
+              </div>
               <a name="button" id="button" class="btn btn-primary" href="{{ item.get_absolute_url }}" role="button">SAIBA MAIS</a>
             </div>
           </div>

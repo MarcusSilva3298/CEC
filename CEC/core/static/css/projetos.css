@@ -72,33 +72,3 @@
 .card3{
     background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 91px, #F6C101 91px, #F6C101 100%) !important;
 }
-
-@media (max-width: 1400px){
-    .card1 .btn , .card1 .btn-primary:hover{
-        right: 70px;
-        left: 70px;
-    }
-    .card2 .btn, .card2 .btn-primary:hover{
-        right: 70px;
-        left: 70px;
-    }
-    .card3 .btn, .card3 .btn-primary:hover{
-        right: 70px;
-        left: 70px;
-    }
-}
-
-@media (max-width: 1200px){
-    .card1 .btn , .card1 .btn-primary:hover{
-        right: 45px;
-        left: 45px;
-    }
-    .card2 .btn, .card2 .btn-primary:hover{
-        right: 45px;
-        left: 45px;
-    }
-    .card3 .btn, .card3 .btn-primary:hover{
-        right: 45px;
-        left: 45px;
-    }
-}

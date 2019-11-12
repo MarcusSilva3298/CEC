@@ -17,10 +17,13 @@ def home(request):
     models_context['Galeria'] = Galeria.objects.all()
     models_context['Contatos'] = Contatos.objects.all()
     models_context['Projetos'] = Projetos.objects.order_by('-start_date')[:3]
-
     
     #Utilização dos forms
     if request.method == 'POST':
+        forms_context = {
+            'form': Matricula(),
+            'form1': Contato()
+        }
         #Importação dos forms
         form = Matricula(request.POST)
         form1 = Contato(request.POST)
@@ -31,7 +34,6 @@ def home(request):
             form.send_mail()
 
         if form1.is_valid():
-            forms_context = { 'form1': Contato() }
             forms_context['is_valid'] = True
             print(form1.cleaned_data)
             form1.send_mail()
@@ -67,10 +69,14 @@ def blogProjetos(request):
     models_context['Projetos'] = proj
 
     #Utilização do form
-    if request.method is 'POST':
+    if request.method == 'POST':
+        forms_context = {
+            'form1': Contato()
+        }
+        #Importação dos forms
         form1 = Contato(request.POST)
 
-        if form1.is_valid:
+        if form1.is_valid():
             forms_context['is_valid'] = True
             print(form1.cleaned_data)
             form1.send_mail()
@@ -92,6 +98,9 @@ def postProjeto(request, slug):
 
     #Utilização do form
     if request.method is 'POST':
+        forms_context = {
+            'form1': Contato()
+        }
         form1 = Contato(request.POST)
 
         if form1.is_valid:
