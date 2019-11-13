@@ -6,9 +6,21 @@ class Matricula(forms.Form):
     #serie choices
     series = [
         ('', 'Série'),
-        ('0', 'Pré infantil'),
-        ('1', 'fundamental 1'),
-        ('2', 'fundamental 2')
+        ('Tempo Integral', 'Tempo Integral'),
+        ('Fase 1', 'Fase 1 (A partir de 1 ano e 8 Meses)'),
+        ('Fase 2', 'Fase 2 (A partir de 2 anos)'),
+        ('Fase 3', 'Fase 3 (A partir de 3 anos)'),
+        ('Fase 4', 'Fase 4 (A partir de 4 anos)'),
+        ('Fase 5', 'Fase 5 (A partir de 5 anos)'),
+        ('1º Ano', '1º Ano'),
+        ('2º Ano', '2º Ano'),
+        ('3º Ano', '3º Ano'),
+        ('4º Ano', '4º Ano'),
+        ('5º Ano', '5º Ano'),
+        ('6º Ano', '6º Ano'),
+        ('7º Ano', '7º Ano'),
+        ('8º Ano', '8º Ano'),
+        ('9º Ano', '9º Ano'),
     ]
 
     nome_resp = forms.CharField(
